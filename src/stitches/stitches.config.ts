@@ -1,4 +1,3 @@
-/* eslint-disable enforce-stitches-tokens */
 import { createStitches } from '@stitches/react';
 import { pxToRem } from '@/utilities/pxToRem';
 import { colors } from './colorPrimitives';
