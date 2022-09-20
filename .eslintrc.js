@@ -25,6 +25,7 @@ const ruleOverrides = {
 };
 
 module.exports = {
+  extends: ['next/core-web-vitals'],
   overrides: [
     {
       excludedFiles: '*.test.ts',

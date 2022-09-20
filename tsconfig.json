@@ -7,11 +7,7 @@
     "incremental": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
@@ -22,9 +18,7 @@
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "paths": {
-      "@/*": [
-        "*"
-      ]
+      "@/*": ["*"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,
@@ -35,12 +29,6 @@
     "allowJs": true,
     "esModuleInterop": true
   },
-  "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "**/*.ts",
-    "**/*.spec.ts",
-    "typings"
-  ]
+  "exclude": ["node_modules"],
+  "include": ["**/*.ts", "**/*.tsx", "**/*.spec.ts", "typings"]
 }
