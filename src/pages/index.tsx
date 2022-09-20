@@ -25,6 +25,8 @@ const Container = styled(motion.div, {
   alignItems: 'center',
   gap: '$8',
   '& > *': {
+    transform: 'translate(-18px, 24px)',
+    opacity: 0,
     animation: `${fadeUpAndIn} 1s forwards ease-out`,
   },
 });
