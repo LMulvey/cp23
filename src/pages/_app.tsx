@@ -1,3 +1,4 @@
+import { PointerProvider } from '@/contexts/PointerContext';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { Router } from 'next/router';
@@ -38,7 +39,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           property="og:description"
           content="Console-ing Passions 2023, organized by a team of feminist media scholars, will be held at the University of Calgary on June 2023."
         />
-        <meta property="og:image" content="%PUBLIC_URL%/images/og-image.png" />
+        <meta
+          property="og:image"
+          content="https://cp2023.vercel.app/images/og-image.png"
+        />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://cp2023.vercel.app/" />
         <meta property="twitter:title" content="Console-ing Passions 2023" />
@@ -48,10 +52,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta
           property="twitter:image"
-          content="%PUBLIC_URL%/images/og-image.png"
+          content="https://cp2023.vercel.app/images/og-image.png"
         />
       </Head>
-      <Component {...pageProps} />
+      <PointerProvider>
+        <Component {...pageProps} />
+      </PointerProvider>
     </>
   );
 }

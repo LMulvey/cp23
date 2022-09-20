@@ -74,13 +74,14 @@ export const globalStyles = globalCss({
   '@font-face': fontFace,
   a: { color: 'inherit', cursor: 'pointer', textDecoration: 'none' },
   body: {
-    background: 'linear-gradient(to right, $pink1, $purple1, $blue1)',
+    background: 'linear-gradient(-45deg, $pink1, $purple1, $blue1)',
     color: '$defaultFont',
     fontFamily: '$body',
     height: '100%',
     margin: 0,
     overflowX: 'hidden',
     overflowY: 'auto',
+    transform: 'translate3d(0,0,0)',
   },
   'body, html': {
     '-moz-osx-font-smoothing': 'grayscale',
