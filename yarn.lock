@@ -245,7 +245,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.18.9":
+"@babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.18.9, @babel/runtime@npm:^7.19.0":
   version: 7.19.0
   resolution: "@babel/runtime@npm:7.19.0"
   dependencies:
@@ -1192,12 +1192,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@stitches/react@npm:^1.2.8":
+  version: 1.2.8
+  resolution: "@stitches/react@npm:1.2.8"
+  peerDependencies:
+    react: ">= 16.3.0"
+  checksum: 029795323cdedb5599ec0636526fc233b2cf41fa9c1f4a704b1f7f457c6170053384a7430afed45e25f73e348d7c391cf1379bc079943cd9cad44302234a5244
+  languageName: node
+  linkType: hard
+
 "@swc/helpers@npm:0.4.11":
   version: 0.4.11
   resolution: "@swc/helpers@npm:0.4.11"
   dependencies:
     tslib: ^2.4.0
   checksum: 736857d524b41a8a4db81094e9b027f554004e0fa3e86325d85bdb38f7e6459ce022db079edb6c61ba0f46fe8583b3e663e95f7acbd13e51b8da6c34e45bba2e
+  languageName: node
+  linkType: hard
+
+"@tanem/react-nprogress@npm:^5.0.14":
+  version: 5.0.14
+  resolution: "@tanem/react-nprogress@npm:5.0.14"
+  dependencies:
+    "@babel/runtime": ^7.19.0
+    hoist-non-react-statics: ^3.3.2
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 69c435c1ef3f19a1e0ce9f9085410361e6df2ca2d5abb4a790c6236dbf1d40d9da1bbcd8034ae1b8f214348ef3ff05377e3117ca18d687cca1319e678e278a3c
   languageName: node
   linkType: hard
 
@@ -1254,6 +1276,13 @@ __metadata:
   version: 2.4.1
   resolution: "@types/normalize-package-data@npm:2.4.1"
   checksum: e87bccbf11f95035c89a132b52b79ce69a1e3652fe55962363063c9c0dae0fe2477ebc585e03a9652adc6f381d24ba5589cc5e51849df4ced3d3e004a7d40ed5
+  languageName: node
+  linkType: hard
+
+"@types/nprogress@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "@types/nprogress@npm:0.2.0"
+  checksum: 561384775008ae58111f038f8f9468b3de8987cd753feef9bf6d07af0e1343390d492a078bb08a7b53ac7370208e31e06ac069cb852c435d49f5fe218e9769c4
   languageName: node
   linkType: hard
 
@@ -1914,7 +1943,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cp23@workspace:."
   dependencies:
+    "@stitches/react": ^1.2.8
+    "@tanem/react-nprogress": ^5.0.14
     "@types/node": 18.7.18
+    "@types/nprogress": ^0.2.0
     "@types/react": 18.0.20
     "@types/react-dom": 18.0.6
     cspell: ^6.10.0
@@ -1923,9 +1955,11 @@ __metadata:
     eslint-config-next: 12.3.1
     eslint-config-prettier: ^8.5.0
     next: 12.3.1
+    nprogress: ^0.2.0
     prettier: ^2.7.1
     react: 18.2.0
     react-dom: 18.2.0
+    stitches: ^1.2.11
     typescript: 4.8.3
   languageName: unknown
   linkType: soft
@@ -3388,6 +3422,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"hoist-non-react-statics@npm:^3.3.2":
+  version: 3.3.2
+  resolution: "hoist-non-react-statics@npm:3.3.2"
+  dependencies:
+    react-is: ^16.7.0
+  checksum: b1538270429b13901ee586aa44f4cc3ecd8831c061d06cb8322e50ea17b3f5ce4d0e2e66394761e6c8e152cd8c34fb3b4b690116c6ce2bd45b18c746516cb9e8
+  languageName: node
+  linkType: hard
+
 "hosted-git-info@npm:^2.1.4":
   version: 2.8.9
   resolution: "hosted-git-info@npm:2.8.9"
@@ -4181,6 +4224,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nprogress@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "nprogress@npm:0.2.0"
+  checksum: 66b7bec5d563ecf2d1c3d2815e6d5eb74ed815eee8563e0afa63d3f185ab1b9cf2ddd97e1ded263b9995c5019d26d600320e849e50f3747984daa033744619dc
+  languageName: node
+  linkType: hard
+
 "obj-props@npm:^1.0.0":
   version: 1.4.0
   resolution: "obj-props@npm:1.4.0"
@@ -4526,7 +4576,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-is@npm:^16.13.1":
+"react-is@npm:^16.13.1, react-is@npm:^16.7.0":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
@@ -4862,6 +4912,13 @@ __metadata:
   version: 3.0.12
   resolution: "spdx-license-ids@npm:3.0.12"
   checksum: 92a4dddce62ce1db6fe54a7a839cf85e06abc308fc83b776a55b44e4f1906f02e7ebd506120847039e976bbbad359ea8bdfafb7925eae5cd7e73255f02e0b7d6
+  languageName: node
+  linkType: hard
+
+"stitches@npm:^1.2.11":
+  version: 1.2.11
+  resolution: "stitches@npm:1.2.11"
+  checksum: a5fad0182c3a6b84b859df7b6a2d111f13bc1e8814af37eb05239b826b08052cb25c7ad952d8427ec747dc8e35eea790fe8f9c2533e88f32679239c5a4f31c65
   languageName: node
   linkType: hard
 
