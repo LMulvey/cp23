@@ -1,7 +1,6 @@
 import { PageTitle } from '@/components/PageTitle';
 import { styled } from '@/stitches';
 import type { NextPage } from 'next';
-import Head from 'next/head';
 import Image from 'next/image';
 
 const Container = styled('div', {
