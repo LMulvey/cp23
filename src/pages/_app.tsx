@@ -2,7 +2,7 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { Router } from 'next/router';
 import * as NProgress from 'nprogress';
-import { globalStyles } from './global.styles';
+import { globalStyles } from '../stitches/global.styles';
 
 Router.events.on('routeChangeComplete', () => {
   NProgress.done();
