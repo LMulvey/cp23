@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "apollographql.vscode-apollo",
+    "esbenp.prettier-vscode",
+    "styled-components.vscode-styled-components",
+    "arcanis.vscode-zipfs",
+    "streetsidesoftware.code-spell-checker",
+    "dbaeumer.vscode-eslint"
+  ]
+}

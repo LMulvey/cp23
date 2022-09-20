@@ -1,0 +1,22 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": true,
+  "eslint.codeActionsOnSave.rules": ["@typescript-eslint/*", "*"],
+  "eslint.options": {
+    "cache": true,
+    "rulePaths": ["lib/custom-lint-rules"]
+  },
+  "eslint.packageManager": "yarn",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "json",
+    "typescript",
+    "typescriptreact",
+    "yaml"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.suggest.showStatusBar": false
+}
