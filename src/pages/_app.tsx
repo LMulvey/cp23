@@ -32,18 +32,15 @@ function MyApp({ Component, pageProps }: AppProps) {
           content="Console-ing Passions 2023, organized by a team of feminist media scholars, will be held at the University of Calgary on June 2023."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://metatags.io/" />
+        <meta property="og:url" content="https://cp2023.vercel.app/" />
         <meta property="og:title" content="Console-ing Passions 2023" />
         <meta
           property="og:description"
           content="Console-ing Passions 2023, organized by a team of feminist media scholars, will be held at the University of Calgary on June 2023."
         />
-        <meta
-          property="og:image"
-          content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
-        />
+        <meta property="og:image" content="%PUBLIC_URL%/images/og-image.png" />
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://metatags.io/" />
+        <meta property="twitter:url" content="https://cp2023.vercel.app/" />
         <meta property="twitter:title" content="Console-ing Passions 2023" />
         <meta
           property="twitter:description"
@@ -51,7 +48,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta
           property="twitter:image"
-          content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
+          content="%PUBLIC_URL%/images/og-image.png"
         />
       </Head>
       <Component {...pageProps} />
