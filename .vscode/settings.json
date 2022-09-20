@@ -5,8 +5,7 @@
   "editor.formatOnSave": true,
   "eslint.codeActionsOnSave.rules": ["@typescript-eslint/*", "*"],
   "eslint.options": {
-    "cache": true,
-    "rulePaths": ["lib/custom-lint-rules"]
+    "cache": true
   },
   "eslint.packageManager": "yarn",
   "eslint.validate": [

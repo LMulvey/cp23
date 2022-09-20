@@ -1,5 +1,3 @@
-/* eslint-disable enforce-stitches-tokens */
-
 /**
  * Using $ REM tokens for box shadow attributes doesn't
  * map correctly with stitches - it attempts to self-map all

@@ -85,11 +85,9 @@ export const globalStyles = globalCss({
   'body, html': {
     '-moz-osx-font-smoothing': 'grayscale',
     '-webkit-font-smoothing': 'antialiased',
-    // eslint-disable-next-line enforce-stitches-tokens
     fontSize: '14px',
     // eslint-disable-next-line canonical/sort-keys
     '@bp4': {
-      // eslint-disable-next-line enforce-stitches-tokens
       fontSize: `clamp(14px, 280px, 0.95vw)`,
     },
   },

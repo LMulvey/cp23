@@ -1,4 +1,3 @@
-/* eslint-disable enforce-stitches-tokens */
 export const screenReaderOnly = () => ({
   border: 0,
   clip: 'rect(1px, 1px, 1px, 1px)',
