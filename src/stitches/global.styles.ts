@@ -14,16 +14,7 @@ export const globalStyles = globalCss({
   '#__next': { height: '100%' },
   '#nprogress': { pointerEvents: 'none' },
   '#nprogress .bar': {
-    background: `linear-gradient(
-      90deg,
-      rgba(255, 90, 94, 1) 0%,
-      rgba(255, 158, 49, 1) 16%,
-      rgba(242, 201, 76, 1) 32%,
-      rgba(210, 217, 67, 1) 48%,
-      rgba(108, 163, 224, 1) 64%,
-      rgba(143, 111, 219, 1) 80%,
-      rgba(255, 90, 94, 1) 100%
-    ) rgb(255, 90, 94)`,
+    background: '$yellow',
     height: '$4',
     left: 0,
     position: 'fixed',
@@ -51,10 +42,10 @@ export const globalStyles = globalCss({
   },
   '#nprogress .spinner-icon': {
     animation: `${spin} 800ms linear infinite`,
-    border: '$borderWidths$4 solid transparent',
-    borderLeftColor: '$brandYellow',
+    border: '4px solid transparent',
+    borderLeftColor: '$yellow',
     borderRadius: '$60',
-    borderTopColor: '$brandYellow',
+    borderTopColor: '$yellow',
     boxSizing: 'border-box',
     height: '$32',
     width: '$32',
@@ -72,9 +63,9 @@ export const globalStyles = globalCss({
     },
   '::selection, ::-moz-selection': { background: '$brandYellow' },
   '@font-face': fontFace,
-  a: { color: 'inherit', cursor: 'pointer', textDecoration: 'none' },
+  a: { color: '$pink2 ', cursor: 'pointer', textDecoration: 'underline' },
   body: {
-    background: 'linear-gradient(-45deg, $pink1, $purple1, $blue1)',
+    background: '$pageBackground ',
     color: '$defaultFont',
     fontFamily: '$body',
     height: '100%',
