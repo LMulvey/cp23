@@ -141,6 +141,7 @@ const Home: NextPage = () => {
         src="/images/cp-logo.png"
         width="427px"
         height="115px"
+        layout="fixed"
         priority
       />
       <Heading>
