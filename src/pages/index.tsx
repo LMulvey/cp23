@@ -150,7 +150,14 @@ const Home: NextPage = () => {
         <Gradient>University of Calgary</Gradient>.
       </Heading>
       <Links>
-        <Link>🔖 Call for Papers</Link>
+        <Link
+          aria-label="Console-ing Passions 2023 Call for Papers Submission"
+          href="https://www.openconf.org/consoleingpassions2023/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          🔖 Call for Papers
+        </Link>
         <LinkDivider />
         <Link>🤔 FAQ</Link>
       </Links>
