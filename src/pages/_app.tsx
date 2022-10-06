@@ -33,7 +33,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           content="Console-ing Passions 2023, organized by a team of feminist media scholars, will be held at the University of Calgary on June 2023."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://cp2023.vercel.app/" />
+        <meta
+          property="og:url"
+          content="https://www.consoleingpassions2023.ca/"
+        />
         <meta property="og:title" content="Console-ing Passions 2023" />
         <meta
           property="og:description"
@@ -41,10 +44,13 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta
           property="og:image"
-          content="https://cp2023.vercel.app/images/og-image.png"
+          content="https://www.consoleingpassions2023.ca/images/og-image.png"
         />
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://cp2023.vercel.app/" />
+        <meta
+          property="twitter:url"
+          content="https://www.consoleingpassions2023.ca/"
+        />
         <meta property="twitter:title" content="Console-ing Passions 2023" />
         <meta
           property="twitter:description"
@@ -52,7 +58,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta
           property="twitter:image"
-          content="https://cp2023.vercel.app/images/og-image.png"
+          content="https://www.consoleingpassions2023.ca/images/og-image.png"
         />
       </Head>
       <PointerProvider>
