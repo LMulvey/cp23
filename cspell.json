@@ -1,16 +1,27 @@
 {
   "allowCompoundWords": false,
-  "ignoreRegExpList": ["/.*[0-9].*/"],
+  "ignoreRegExpList": [
+    "/.*[0-9].*/"
+  ],
   "language": "en",
   "minWordLength": 5,
   "version": "0.2",
   "words": [
-    "tsconfigs",
+    "alora",
+    "Bearspaw",
+    "Chiniki",
+    "Kainai",
+    "mulvey",
+    "Nakoda",
+    "nprogress",
+    "paulsen",
+    "Piikani",
+    "roundtables",
     "rulesdir",
     "segoe",
-    "nprogress",
-    "alora",
-    "paulsen",
-    "mulvey"
+    "Siksika",
+    "tsconfigs",
+    "Tsuut’ina",
+    "Univers"
   ]
 }

@@ -20,16 +20,12 @@ const Container = styled(motion.div, {
 
 const Heading = styled(motion.h1, {
   textShadow: '$blue40',
-  fontSize: '$48',
+  fontSize: '$32',
   fontWeight: '700',
   letterSpacing: '-$1',
   lineHeight: 1,
-  '&:first-of-type': {
-    marginTop: '$16',
-  },
   textAlign: 'center',
   '@bp2': {
-    fontSize: '$54',
     textAlign: 'left',
   },
 });
@@ -52,21 +48,22 @@ const Links = styled(motion.div, {
   },
 });
 
-const LinkDivider = styled(motion.div, {
-  width: '4px',
-  height: '100%',
-  borderRadius: '6px',
-  background: '$pinkGradient',
-});
+// const LinkDivider = styled(motion.div, {
+//   width: '4px',
+//   height: '100%',
+//   borderRadius: '6px',
+//   background: '$pinkGradient',
+// });
 
 const Link = styled(motion.a, {
   color: '$white',
   textShadow: '$blue40',
   fontSize: '$24',
   fontWeight: '600',
+  textAlign: 'center',
   letterSpacing: '-$1',
-  lineHeight: 1,
-  marginTop: '-$4',
+  lineHeight: 1.2,
+  marginTop: '-$12',
   position: 'relative',
   textDecoration: 'none',
   '&:hover': {
@@ -78,24 +75,29 @@ const Link = styled(motion.a, {
     content: '',
     position: 'absolute',
     bottom: '-$12',
-    left: 0,
+    left: '50%',
     height: '$4',
     transformOrigin: 'center center',
     background: '$yellow',
     borderRadius: '$8',
     boxShadow: '$blue100',
-    transform: 'scaleX(1)',
+    transform: 'scaleX(1) translateX(-50%)',
     transition: 'transform 0.2s ease-out',
-    width: 'calc(100% + $24)',
+    width: '80%',
   },
   '@bp2': {
     fontSize: '$28',
     textAlign: 'left',
+    marginTop: '-$4',
     '&:after': {
+      width: 'calc(100% + $24)',
+      left: 0,
       transform: 'scaleX(0)',
     },
   },
 });
+
+const ImageContainer = styled(motion.div, {});
 
 const Gradient = styled(motion.span, {
   background: '$pinkGradient',
@@ -110,6 +112,55 @@ const Content = styled(motion.p, {
   marginBottom: '$48',
   lineHeight: 1.34,
   textAlign: 'center',
+  variants: {
+    small: {
+      true: {
+        fontSize: '$18',
+      },
+    },
+    footer: {
+      true: {
+        fontSize: '$14',
+        fontStyle: 'italic',
+        marginBottom: 0,
+      },
+    },
+  },
+});
+
+const Divider = styled(motion.div, {
+  height: '$2',
+  backgroundColor: 'rgba(0, 0, 0, 0.2)',
+  width: '100%',
+  marginBottom: '$48',
+});
+
+const Navbar = styled('div', {
+  display: 'flex',
+  flexFlow: 'column nowrap',
+  justifyContent: 'center',
+  alignItems: 'center',
+  width: '100vw',
+  padding: '0 $8',
+  gap: '$32',
+  '@bp2': {
+    gap: '$8',
+    padding: '0 $32',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    flexFlow: 'row nowrap',
+  },
+});
+
+const Footer = styled('div', {
+  borderTop: '1px solid rgba(0, 0, 0, 0.2)',
+  marginTop: '$32',
+  paddingTop: '$32',
+});
+
+const NavbarInfo = styled('div', {
+  display: 'flex',
+  flexFlow: 'column nowrap',
 });
 
 const animationVariants = {
@@ -126,6 +177,15 @@ const contentVariants = {
   ...animationVariants,
   visible: {
     ...animationVariants.visible,
+    opacity: 0.8,
+  },
+};
+
+const dividerVariants = {
+  hidden: { opacity: 0, scaleX: 0 },
+  visible: {
+    ...animationVariants.visible,
+    scaleX: 1,
     opacity: 0.8,
   },
 };
@@ -149,22 +209,27 @@ const Home: NextPage = () => {
       whileInView="visible"
     >
       <PageTitle />
-      <motion.div variants={animationVariants}>
-        <Image
-          alt="Console-ing Passions logo"
-          src="/images/cp-logo.png"
-          width={isBp2 ? '427px' : '214px'}
-          height={isBp2 ? '115px' : '58px'}
-          layout="fixed"
-          priority
-        />
-      </motion.div>
-      <Heading variants={animationVariants}>
-        June 2023<Gradient>.</Gradient>
-      </Heading>
-      <Heading variants={animationVariants}>
-        <Gradient>University of Calgary</Gradient>.
-      </Heading>
+
+      <Navbar>
+        <ImageContainer variants={animationVariants}>
+          <Image
+            alt="Console-ing Passions logo"
+            src="/images/cp-logo.png"
+            width="427px"
+            height="115px"
+            layout="intrinsic"
+            priority
+          />
+        </ImageContainer>
+        <NavbarInfo>
+          <Heading variants={animationVariants}>
+            June 22 - 24, 2023<Gradient>.</Gradient>
+          </Heading>
+          <Heading variants={animationVariants}>
+            Univers<Gradient>ity of Calgary</Gradient>.
+          </Heading>
+        </NavbarInfo>
+      </Navbar>
       <Links variants={animationVariants}>
         <Link
           aria-label="Console-ing Passions 2023 Call for Papers Submission"
@@ -172,35 +237,55 @@ const Home: NextPage = () => {
           rel="noopener noreferrer"
           target="_blank"
         >
-          🔖 Call for Papers
+          🔖 The Call for Papers opens on October 17, 2022
         </Link>
-        <LinkDivider />
-        <Link>🤔 FAQ</Link>
+        {/* <LinkDivider />
+        <Link>🤔 FAQ</Link> */}
       </Links>
+      <Content small variants={contentVariants}>
+        The organizing committee invites proposals for individual papers,
+        pre-constituted panels, pre-constituted roundtables, and creative works
+        that explore media cultures from an intersectional feminist perspective.
+        We are particularly interested in research proposals that address the
+        crises of our current moment, including sexism, racism, and ableism in
+        media; gendered media production cultures; resistance to the alt-right;
+        platformed misogyny and racism; mediated activism post-Roe; Indigenous
+        media cultures, and queer and trans representation. We are committed to
+        making our field more inclusive and enthusiastically welcome proposals
+        addressing Indigenous and non-Western media cultures and contexts.
+      </Content>
+      <Divider variants={dividerVariants} />
       <Content variants={contentVariants}>
-        <strong>Console-ing Passions</strong> is an international group of
-        feminist and queer scholars whose interests converge around the study of
-        television, video, audio, and new media. The group was founded in 1989
-        and has been hosting conferences since 1992. CP conferences present
-        opportunities for scholars at all levels of their careers to engage with
-        feminism, media, and social change.
+        <strong>
+          The 2023 Console-ing Passions: International Conference on Television,
+          Video, Audio, New Media and Feminism
+        </strong>{' '}
+        will be held in person at the University of Calgary, Canada on{' '}
+        <strong>
+          <time dateTime="2023-06-22">June 22 - 24, 2023</time>
+        </strong>
+        .
       </Content>
       <Content variants={contentVariants}>
-        <strong>Console-ing Passions 2023</strong>, to be held at the University
-        of Calgary (UofC) Summer 2023, is organized by a team of feminist media
-        scholars coordinated by{' '}
-        <a
-          href="https://twitter.com/alorapm"
-          aria-label="Console-ing Passions 2023 coordinator Alora Paulsen Mulvey"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Alora Paulsen Mulvey
-        </a>
-        . The live conference will be held on Zoom and in-person simultaneously.
-        For the detailed program and participants guides, visit the conference
-        repository.
+        <strong>Console-ing Passions 2023</strong> is organized by Jessalynn
+        Keller, Dawn Johnston, Alora Paulsen Mulvey, Annie Rudd, Tamara Shepherd
+        and Samantha Thrift from the Department of Communication, Media and Film
+        at the University of Calgary.
       </Content>
+      <Heading variants={animationVariants}>
+        We look forward <Gradient>to seeing you next June!</Gradient>
+      </Heading>
+
+      <Footer>
+        <Content footer variants={contentVariants}>
+          Calgary is located in the traditional territories of the people of the
+          Treaty 7 region in Southern Alberta, which includes the Blackfoot
+          Confederacy (comprising the Siksika, Piikani, and Kainai First
+          Nations), as well as the Tsuut’ina First Nation, and the Stoney Nakoda
+          (including the Chiniki, Bearspaw, and Wesley First Nations). The city
+          of Calgary is also home to the Métis Nation of Alberta, Region 3.
+        </Content>
+      </Footer>
     </Container>
   );
 };
