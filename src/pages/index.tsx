@@ -1,7 +1,5 @@
 import { PageTitle } from '@/components/PageTitle';
-import { useMatchMedia } from '@/hooks/useMatchMedia';
 import { styled } from '@/stitches';
-import { minWidthMediaQueries } from '@/stitches/media';
 import { motion } from 'framer-motion';
 import type { NextPage } from 'next';
 import Image from 'next/image';
@@ -191,8 +189,6 @@ const dividerVariants = {
 };
 
 const Home: NextPage = () => {
-  const isBp2 = useMatchMedia(minWidthMediaQueries.bp2);
-
   return (
     <Container
       animate="animate"
