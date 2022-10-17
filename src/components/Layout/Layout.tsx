@@ -97,15 +97,15 @@ const Link = styled(motion.a, {
     width: '80%',
   },
   variants: {
-    $isActive: {
+    isActive: {
       true: {
         '&:after': {
           transform: 'scaleX(1)',
           background: '$white',
-        },
-        '@bp2': {
-          transform: 'scaleX(1)',
-          background: '$white',
+          '@bp2': {
+            transform: 'scaleX(1)',
+            background: '$white',
+          },
         },
       },
     },
@@ -161,8 +161,8 @@ export const Layout = ({
   children,
   ...props
 }: HTMLMotionProps<'div'> & { title?: string; children: ReactNode }) => {
-  const { pathname } = useRouter();
-
+  const { pathname, ...other } = useRouter();
+  console.log({ other });
   const isActive = (path: string) => {
     return pathname === path;
   };
@@ -172,8 +172,8 @@ export const Layout = ({
       <PageTitle title={title} />
 
       <Navbar>
-        <ImageContainer variants={commonAnimationVariants}>
-          <NextLink href="/">
+        <NextLink href="/">
+          <ImageContainer variants={commonAnimationVariants}>
             <Image
               alt="Console-ing Passions logo"
               src="/images/cp-logo.png"
@@ -182,8 +182,8 @@ export const Layout = ({
               layout="intrinsic"
               priority
             />
-          </NextLink>
-        </ImageContainer>
+          </ImageContainer>
+        </NextLink>
         <NavbarInfo>
           <Heading variants={commonAnimationVariants}>
             June 22 - 24, 2023<Gradient>.</Gradient>
@@ -197,7 +197,7 @@ export const Layout = ({
         <NextLink href="/call-for-papers" passHref>
           <Link
             aria-label="Console-ing Passions 2023 Call for Papers Submission"
-            $isActive={isActive('/call-for-papers')}
+            isActive={isActive('/call-for-papers')}
             href="/call-for-papers"
           >
             🔖 Call for Papers

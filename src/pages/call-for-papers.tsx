@@ -19,18 +19,23 @@ const Divider = styled(motion.div, {
 
 const List = styled(motion.ul, {
   textAlign: 'left',
-  marginTop: '$16',
+  marginTop: '-$16',
   alignSelf: 'start',
   display: 'flex',
   flexFlow: 'column nowrap',
   gap: '$8',
+  color: '#333',
+  fontSize: '$20',
+  fontWeight: '400',
+  lineHeight: 1.34,
+  marginBottom: '$48',
 });
 
 const CallForPapers: NextPage = () => {
   return (
     <Layout
       animate="animate"
-      initial="hidden"
+      initial="animate"
       variants={{
         visible: {
           transition: {
@@ -167,47 +172,46 @@ const CallForPapers: NextPage = () => {
         If you would like your submission to be considered for one of our
         virtual slots, please state this in the proposal. All submissions will
         be considered in-person, unless otherwise stated.
-        <List>
-          <li>
-            <u>Individual Papers:</u> Individuals submitting paper proposals
-            should provide a title, abstract of 250 words, short bio, and
-            contact information. Co-authored papers are acceptable.
-          </li>
-          <li>
-            <u>Pre-constituted Panels:</u> For scheduling purposes, panel
-            coordinators must first submit a panel proposal using OpenConf (link
-            found below). The proposal should include a 250-word panel rationale
-            and the names of all panel participants. Once the panel proposal is
-            submitted, each panel participant (including the coordinator) must
-            also submit a separate paper proposal. The individual participant
-            submissions must include a 250-word abstract, a short bio, and the
-            panel&apos;s title and corresponding OpenConf submission number.
-            Panels should include 3-4 papers. Co-authored papers are acceptable.
-            Panels that include a diversity of panelist affiliations and
-            experience levels are strongly encouraged.
-          </li>
-          <li>
-            <u>Pre-constituted Roundtables:</u> Pre-constituted roundtables
-            should focus either on scholarly topics in the field or matters of
-            professional interest. We are especially interested in roundtables
-            that are likely to engage wide participation by conference attendees
-            and which reflect our field&apos;s diversity of cultural identities,
-            institutions, methodologies, and professional rank or employment
-            status. Proposals should be submitted by a convener, who will
-            propose a question (&lt;100 words) and solicit brief (&lt;200 words)
-            responses from 4-6 respondents. Proposals should also include a
-            brief bio and contact information for the convener and each
-            participant.
-          </li>
-          <li>
-            <u>Creative Works:</u> We invite proposals for video, audio, or new
-            media screenings or exhibits. Each proposal should consist of a
-            250-word description (including the length and format of the work),
-            a short bio of the creator/producer/director, and contact
-            information. If the work is viewable online, please submit a URL.
-          </li>
-        </List>
       </Content>
+      <List variants={contentVariants}>
+        <li>
+          <u>Individual Papers:</u> Individuals submitting paper proposals
+          should provide a title, abstract of 250 words, short bio, and contact
+          information. Co-authored papers are acceptable.
+        </li>
+        <li>
+          <u>Pre-constituted Panels:</u> For scheduling purposes, panel
+          coordinators must first submit a panel proposal using OpenConf (link
+          found below). The proposal should include a 250-word panel rationale
+          and the names of all panel participants. Once the panel proposal is
+          submitted, each panel participant (including the coordinator) must
+          also submit a separate paper proposal. The individual participant
+          submissions must include a 250-word abstract, a short bio, and the
+          panel&apos;s title and corresponding OpenConf submission number.
+          Panels should include 3-4 papers. Co-authored papers are acceptable.
+          Panels that include a diversity of panelist affiliations and
+          experience levels are strongly encouraged.
+        </li>
+        <li>
+          <u>Pre-constituted Roundtables:</u> Pre-constituted roundtables should
+          focus either on scholarly topics in the field or matters of
+          professional interest. We are especially interested in roundtables
+          that are likely to engage wide participation by conference attendees
+          and which reflect our field&apos;s diversity of cultural identities,
+          institutions, methodologies, and professional rank or employment
+          status. Proposals should be submitted by a convener, who will propose
+          a question (&lt;100 words) and solicit brief (&lt;200 words) responses
+          from 4-6 respondents. Proposals should also include a brief bio and
+          contact information for the convener and each participant.
+        </li>
+        <li>
+          <u>Creative Works:</u> We invite proposals for video, audio, or new
+          media screenings or exhibits. Each proposal should consist of a
+          250-word description (including the length and format of the work), a
+          short bio of the creator/producer/director, and contact information.
+          If the work is viewable online, please submit a URL.
+        </li>
+      </List>
 
       <HeadingMid variants={commonAnimationVariants}>
         Submission Guidelines

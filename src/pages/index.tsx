@@ -4,13 +4,16 @@ import {
   commonAnimationVariants,
   contentVariants,
 } from '@/utilities/animation';
+import { useReducedMotion } from 'framer-motion';
 import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <Layout
       animate="animate"
-      initial="hidden"
+      initial={shouldReduceMotion ? 'animate' : 'hidden'}
       variants={{
         visible: {
           transition: {

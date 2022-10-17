@@ -22,4 +22,5 @@ export const Content = styled(motion.p, {
       },
     },
   },
+  willChange: 'transform',
 });
