@@ -18,17 +18,19 @@ const Divider = styled(motion.div, {
 });
 
 const List = styled(motion.ul, {
-  textAlign: 'left',
   marginTop: '-$16',
-  alignSelf: 'start',
   display: 'flex',
   flexFlow: 'column nowrap',
-  gap: '$8',
+  textAlign: 'center',
+  gap: '$16',
   color: '#333',
   fontSize: '$20',
   fontWeight: '400',
   lineHeight: 1.34,
   marginBottom: '$48',
+  '@bp2': {
+    textAlign: 'left',
+  },
 });
 
 const CallForPapers: NextPage = () => {
@@ -80,7 +82,12 @@ const CallForPapers: NextPage = () => {
         <br />
       </Content>
       <Content
-        css={{ textAlign: 'left', alignSelf: 'start' }}
+        css={{
+          '@bp2': {
+            textAlign: 'left',
+            alignSelf: 'start',
+          },
+        }}
         variants={contentVariants}
       >
         The{' '}
@@ -117,7 +124,12 @@ const CallForPapers: NextPage = () => {
         Confirmed Keynotes
       </HeadingMid>
       <Content
-        css={{ textAlign: 'left', alignSelf: 'start' }}
+        css={{
+          '@bp2': {
+            textAlign: 'left',
+            alignSelf: 'start',
+          },
+        }}
         variants={contentVariants}
       >
         <a
@@ -147,7 +159,12 @@ const CallForPapers: NextPage = () => {
       </Content>
       <HeadingMid variants={commonAnimationVariants}>Format</HeadingMid>
       <Content
-        css={{ textAlign: 'left', alignSelf: 'start' }}
+        css={{
+          '@bp2': {
+            textAlign: 'left',
+            alignSelf: 'start',
+          },
+        }}
         variants={contentVariants}
       >
         Due to budgetary constraints and committee workload, this conference is
@@ -166,7 +183,12 @@ const CallForPapers: NextPage = () => {
         Proposal Guidelines
       </HeadingMid>
       <Content
-        css={{ textAlign: 'left', alignSelf: 'start' }}
+        css={{
+          '@bp2': {
+            textAlign: 'left',
+            alignSelf: 'start',
+          },
+        }}
         variants={contentVariants}
       >
         If you would like your submission to be considered for one of our
@@ -218,7 +240,12 @@ const CallForPapers: NextPage = () => {
       </HeadingMid>
 
       <Content
-        css={{ textAlign: 'left', alignSelf: 'start' }}
+        css={{
+          '@bp2': {
+            textAlign: 'left',
+            alignSelf: 'start',
+          },
+        }}
         variants={contentVariants}
       >
         The deadline for submission is{' '}
@@ -241,19 +268,24 @@ const CallForPapers: NextPage = () => {
         Further Information
       </HeadingMid>
       <Content
-        css={{ textAlign: 'left', alignSelf: 'start' }}
+        css={{
+          '@bp2': {
+            textAlign: 'left',
+            alignSelf: 'start',
+          },
+        }}
         variants={contentVariants}
       >
-        Please visit our website for ongoing updates at{' '}
+        Please{' '}
         <a
           aria-label="Console-ing Passions 2023"
           href="https://www.consoleingpassions2023.ca"
         >
-          https://www.consoleingpassions2023.ca
+          visit our website
         </a>{' '}
-        or email{' '}
+        for ongoing updates or email{' '}
         <a
-          aria-label="Contact Dr. Jessalyn Keller"
+          aria-label="Contact Dr. Jessalynn Keller"
           href="mailto:jessalynn.keller@ucalgary.ca"
         >
           Dr. Jessalynn Keller at jessalynn.keller@ucalgary.ca
@@ -274,7 +306,12 @@ const CallForPapers: NextPage = () => {
         CP Calgary 2023 Conference Committee
       </HeadingMid>
       <Content
-        css={{ textAlign: 'left', alignSelf: 'start' }}
+        css={{
+          '@bp2': {
+            textAlign: 'left',
+            alignSelf: 'start',
+          },
+        }}
         variants={contentVariants}
       >
         Jessalynn Keller, Dawn Johnston, Alora Paulsen Mulvey, Annie Rudd,

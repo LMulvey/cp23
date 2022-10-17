@@ -77,11 +77,7 @@ const Link = styled(motion.a, {
   marginTop: '-$12',
   position: 'relative',
   textDecoration: 'none',
-  '&:hover': {
-    '&::after': {
-      transform: 'scaleX(1)',
-    },
-  },
+
   '&:after': {
     content: '',
     position: 'absolute',
@@ -94,13 +90,13 @@ const Link = styled(motion.a, {
     boxShadow: '$blue100',
     transform: 'scaleX(1) translateX(-50%)',
     transition: 'transform 0.2s ease-out',
-    width: '80%',
+    width: '100%',
   },
   variants: {
     isActive: {
       true: {
         '&:after': {
-          transform: 'scaleX(1)',
+          transform: 'scaleX(1) translateX(-50%)',
           background: '$white',
           '@bp2': {
             transform: 'scaleX(1)',
@@ -114,6 +110,11 @@ const Link = styled(motion.a, {
     fontSize: '$28',
     textAlign: 'left',
     marginTop: '-$4',
+    '&:hover': {
+      '&:after': {
+        transform: 'scaleX(1)',
+      },
+    },
     '&:after': {
       width: 'calc(100% + $24)',
       left: 0,
@@ -161,8 +162,8 @@ export const Layout = ({
   children,
   ...props
 }: HTMLMotionProps<'div'> & { title?: string; children: ReactNode }) => {
-  const { pathname, ...other } = useRouter();
-  console.log({ other });
+  const { pathname } = useRouter();
+
   const isActive = (path: string) => {
     return pathname === path;
   };
