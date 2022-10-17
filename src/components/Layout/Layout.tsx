@@ -15,8 +15,8 @@ const Container = styled(motion.div, {
   width: '100vw',
   display: 'flex',
   flexFlow: 'column nowrap',
-  padding: '$24 $36',
   alignItems: 'center',
+  padding: '$24 $36',
   gap: '$8',
   '@bp2': {
     padding: '$48 $124',
@@ -145,7 +145,7 @@ const Navbar = styled('div', {
   },
 });
 
-const Footer = styled('div', {
+const Footer = styled(motion.div, {
   borderTop: '1px solid rgba(0, 0, 0, 0.2)',
   marginTop: '$32',
   paddingTop: '$32',
@@ -200,14 +200,14 @@ export const Layout = ({
             $isActive={isActive('/call-for-papers')}
             href="/call-for-papers"
           >
-            🔖 The Call for Papers opens on October 17, 2022
+            🔖 Call for Papers
           </Link>
         </NextLink>
         {/* <LinkDivider />
         <Link>🤔 FAQ</Link> */}
       </Links>
       {children}
-      <Footer>
+      <Footer variants={commonAnimationVariants}>
         <Content footer variants={contentVariants}>
           Calgary is located in the traditional territories of the people of the
           Treaty 7 region in Southern Alberta, which includes the Blackfoot

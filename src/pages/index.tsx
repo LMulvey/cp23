@@ -27,7 +27,16 @@ const Home: NextPage = () => {
           The 2023 Console-ing Passions: International Conference on Television,
           Video, Audio, New Media and Feminism
         </strong>{' '}
-        will be held in person at the University of Calgary, Canada on{' '}
+        will be held in person at the{' '}
+        <a
+          href="https://ucalgary.ca/"
+          aria-label="University of Calgary"
+          rel="noreferrer noopener"
+          target="_blank"
+        >
+          University of Calgary
+        </a>
+        , Canada on{' '}
         <strong>
           <time dateTime="2023-06-22">June 22 - 24, 2023</time>
         </strong>
