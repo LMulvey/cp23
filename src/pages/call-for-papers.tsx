@@ -141,7 +141,7 @@ const CallForPapers: NextPage = () => {
         </a>{' '}
         (London School of Economics, UK) ,{' '}
         <a
-          href="https://www.utm.utoronto.ca/iccit/sarah-sharma"
+          href="https://sarahsharma.com"
           rel="noreferrer noopener"
           target="_blank"
         >
