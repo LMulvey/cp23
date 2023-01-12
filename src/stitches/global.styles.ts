@@ -78,7 +78,6 @@ export const globalStyles = globalCss({
     '-moz-osx-font-smoothing': 'grayscale',
     '-webkit-font-smoothing': 'antialiased',
     fontSize: '14px',
-    // eslint-disable-next-line canonical/sort-keys
     '@bp4': {
       fontSize: `clamp(14px, 280px, 0.95vw)`,
     },
@@ -110,7 +109,6 @@ export const globalStyles = globalCss({
   },
   html: {
     scrollBehavior: 'smooth',
-    // eslint-disable-next-line canonical/sort-keys
     '&.no-scroll': {
       overflow: 'hidden',
     },

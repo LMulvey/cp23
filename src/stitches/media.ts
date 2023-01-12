@@ -1,4 +1,3 @@
-/* eslint-disable canonical/sort-keys */
 export type BreakpointNames = 'bp0' | 'bp1' | 'bp2' | 'bp3' | 'bp4' | 'bp5';
 
 export type Breakpoints = {

@@ -22,6 +22,11 @@ const ruleOverrides = {
   'unicorn/no-array-for-each': 0,
   'unicorn/no-array-reduce': 0,
   'unicorn/no-unsafe-regex': 0,
+  'canonical/prefer-inline-type-import': 0,
+  'canonical/filename-match-exported': 0,
+  'canonical/id-match': 0,
+  'canonical/no-use-extend-native': 0,
+  'canonical/sort-keys': 0,
 };
 
 module.exports = {

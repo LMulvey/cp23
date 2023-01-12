@@ -8,7 +8,6 @@ export const Heading = styled(motion.h1, {
   lineHeight: 1,
   textAlign: 'center',
   textShadow: '$blue40',
-  // eslint-disable-next-line canonical/sort-keys
   '@bp2': {
     textAlign: 'left',
   },
@@ -22,7 +21,6 @@ export const HeadingMid = styled(motion.h3, {
   lineHeight: 1,
   textAlign: 'center',
   textShadow: '$blue40',
-  // eslint-disable-next-line canonical/sort-keys
   '@bp2': {
     alignSelf: 'start',
     textAlign: 'left',
@@ -36,7 +34,6 @@ export const HeadingLink = styled(motion.a, {
   lineHeight: 1,
   textAlign: 'center',
   textShadow: '$blue40',
-  // eslint-disable-next-line canonical/sort-keys
   '@bp2': {
     textAlign: 'left',
   },
