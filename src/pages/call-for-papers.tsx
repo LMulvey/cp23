@@ -60,9 +60,9 @@ const CallForPapers: NextPage = () => {
         🔗 OpenConf Submission Form
       </HeadingLink>
       <HeadingLink
-        aria-label="Console-ing Passions 2023 Call for Papers PDF"
+        aria-label="Console-ing Passions 2023 Call for Papers PDF (updated January 12, 2023)"
         css={{ marginBottom: '$48' }}
-        href="/files/cp-2023-cfp.pdf"
+        href="/files/cp-2023-cfp-updated-jan12-2023.pdf"
         rel="noopener noreferrer"
         target="_blank"
         variants={commonAnimationVariants}
@@ -221,10 +221,14 @@ const CallForPapers: NextPage = () => {
           that are likely to engage wide participation by conference attendees
           and which reflect our field&apos;s diversity of cultural identities,
           institutions, methodologies, and professional rank or employment
-          status. Proposals should be submitted by a convener, who will propose
-          a question (&lt;100 words) and solicit brief (&lt;200 words) responses
-          from 4-6 respondents. Proposals should also include a brief bio and
-          contact information for the convener and each participant.
+          status. A convener will submit one proposal, who will propose a
+          question (&LeftAngleBracket;100 words) and solicit brief
+          (&LeftAngleBracket;200 words) responses from 4-6 respondents (to be
+          included in the Abstract section of your OpenConf submission).
+          Proposals should also include a brief bio and contact information for
+          the convener and each participant. Please add each participant as an
+          “Author” to ensure they receive communications regarding decision
+          notifications and other CP23 correspondence.
         </li>
         <li>
           <u>Creative Works:</u> We invite proposals for video, audio, or new
