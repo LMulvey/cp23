@@ -229,13 +229,13 @@ const CallForPapers: NextPage = () => {
               attendees and which reflect our field&apos;s diversity of cultural
               identities, institutions, methodologies, and professional rank or
               employment status. A convener will submit one proposal, who will
-              propose a question (&LeftAngleBracket;100 words) and solicit brief
-              (&LeftAngleBracket;200 words) responses from 4-6 respondents (to
-              be included in the Abstract section of your OpenConf submission).
-              Proposals should also include a brief bio and contact information
-              for the convener and each participant. Please add each participant
-              as an “Author” to ensure they receive communications regarding
-              decision notifications and other CP23 correspondence.
+              propose a question (&lt;100 words) and solicit brief (&lt;200
+              words) responses from 4-6 respondents (to be included in the
+              Abstract section of your OpenConf submission). Proposals should
+              also include a brief bio and contact information for the convener
+              and each participant. Please add each participant as an “Author”
+              to ensure they receive communications regarding decision
+              notifications and other CP23 correspondence.
             </li>
             <li>
               <u>Creative Works:</u> We invite proposals for video, audio, or
