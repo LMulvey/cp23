@@ -325,9 +325,9 @@ const CallForPapers: NextPage = () => {
             }}
             variants={contentVariants}
           >
-            Jessalynn Keller, Dawn Johnston, Alora Paulsen Mulvey, Annie Rudd,
-            Tamara Shepherd, Samantha Thrift, Department of Communication, Media
-            and Film, University of Calgary
+            Jessalynn Keller, Alora Paulsen Mulvey, Tamara Shepherd, Samantha
+            Thrift, Department of Communication, Media and Film, University of
+            Calgary
           </Content>
         </>
       ) : (

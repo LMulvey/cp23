@@ -47,9 +47,9 @@ const Home: NextPage = () => {
       </Content>
       <Content variants={contentVariants}>
         <strong>Console-ing Passions 2023</strong> is organized by Jessalynn
-        Keller, Dawn Johnston, Alora Paulsen Mulvey, Annie Rudd, Tamara Shepherd
-        and Samantha Thrift from the Department of Communication, Media and Film
-        at the University of Calgary.
+        Keller, Alora Paulsen Mulvey, Tamara Shepherd and Samantha Thrift from
+        the Department of Communication, Media and Film at the University of
+        Calgary.
       </Content>
       <Heading variants={commonAnimationVariants}>
         We look forward{' '}
