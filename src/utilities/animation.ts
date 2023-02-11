@@ -8,6 +8,16 @@ export const commonAnimationVariants = {
   },
 };
 
+export const navbarVariants = {
+  hidden: { opacity: 0, x: 0, y: '-84px' },
+  visible: {
+    opacity: 1,
+    transition: { stiffness: 50, type: 'spring' },
+    x: 0,
+    y: 0,
+  },
+};
+
 export const contentVariants = {
   ...commonAnimationVariants,
   visible: {

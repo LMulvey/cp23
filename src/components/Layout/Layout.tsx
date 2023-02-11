@@ -3,6 +3,7 @@ import NextLink from 'next/link';
 import {
   commonAnimationVariants,
   contentVariants,
+  navbarVariants,
 } from '@/utilities/animation';
 import { HTMLMotionProps, motion } from 'framer-motion';
 import Image from 'next/image';
@@ -292,7 +293,7 @@ export const Layout = ({
   return (
     <Container {...props}>
       <PageTitle title={title} />
-      <Navbar variants={commonAnimationVariants}>
+      <Navbar variants={navbarVariants}>
         <LogoAndLinks>
           <NextLink href="/">
             <ImageContainer>
