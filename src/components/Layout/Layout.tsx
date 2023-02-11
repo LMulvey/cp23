@@ -1,4 +1,4 @@
-import { styled } from '@/stitches';
+import { keyframes, styled } from '@/stitches';
 import NextLink from 'next/link';
 import {
   commonAnimationVariants,
@@ -154,6 +154,18 @@ const ImageContainer = styled(motion.div, {
   },
 });
 
+const NavbarGradient = keyframes({
+  '0%': {
+    backgroundPosition: '0% 50%',
+  },
+  '50%': {
+    backgroundPosition: '100% 50%',
+  },
+  '100%': {
+    backgroundPosition: '0% 50%',
+  },
+});
+
 const Navbar = styled(motion.div, {
   display: 'flex',
   flexFlow: 'column nowrap',
@@ -165,9 +177,10 @@ const Navbar = styled(motion.div, {
   gap: '$16',
   boxShadow: '$blue40',
   background: '#fdf9df',
-  marginBottom: '$32',
+  marginBottom: '$24',
   position: 'relative',
   '@bp3': {
+    marginBottom: '$72',
     gap: '$8',
     height: '$124',
     padding: '0 $32',
@@ -175,15 +188,18 @@ const Navbar = styled(motion.div, {
     justifyContent: 'space-between',
     flexFlow: 'row nowrap',
   },
-  '&::before': {
-    content: '',
-    width: '100vw',
-    height: '$8',
-    position: 'absolute',
-    left: 0,
-    bottom: 0,
-    background: '$pinkGradient2',
-  },
+});
+
+const NavbarBorder = styled(motion.div, {
+  width: '100vw',
+  height: '$8',
+  position: 'absolute',
+  left: 0,
+  bottom: 0,
+  backgroundSize: '400% 400% !important',
+  background: '$white',
+  backgroundImage: '$pinkGradient2',
+  animation: `${NavbarGradient} 8s ease infinite`,
 });
 
 const LogoAndLinks = styled('div', {
@@ -210,13 +226,65 @@ const NavbarInfo = styled('div', {
   flexFlow: 'column nowrap',
 });
 
+const Breadcrumbs = styled('div', {
+  display: 'flex',
+  flexFlow: 'row nowrap',
+  gap: '$8',
+  fontSize: '$16',
+  marginBottom: '$32',
+  textAlign: 'left',
+  width: '100%',
+  color: '$pink2',
+  '& a': {
+    textDecoration: 'none',
+
+    '&:hover': {
+      textDecoration: 'underline',
+    },
+  },
+});
+
+const BreadcrumbDivider = styled('span', {
+  fontSize: '$18',
+  margin: '0 $8',
+  color: '$defaultFont',
+});
+
+type Segment = {
+  title: string;
+  href: string;
+};
+
+const getSegments = (pathname: string) => {
+  const segments = pathname.split('/').filter((segment) => segment !== '');
+  const titleCaseSegments = segments.reduce((acc, segment) => {
+    const href =
+      acc.length === 0
+        ? `/${segment}`
+        : `${acc?.[acc.length - 1]?.href}/${segment}`;
+
+    return [
+      ...acc,
+      {
+        title: segment
+          .split('-')
+          .map((segment) => segment.charAt(0).toUpperCase() + segment.slice(1))
+          .join(' '),
+        href,
+      },
+    ];
+  }, [] as Segment[]);
+
+  return titleCaseSegments;
+};
+
 export const Layout = ({
   title,
   children,
   ...props
 }: HTMLMotionProps<'div'> & { title?: string; children: ReactNode }) => {
   const { pathname } = useRouter();
-
+  const segments = getSegments(pathname);
   const isActive = (path: string) => {
     return pathname === path;
   };
@@ -224,7 +292,6 @@ export const Layout = ({
   return (
     <Container {...props}>
       <PageTitle title={title} />
-
       <Navbar variants={commonAnimationVariants}>
         <LogoAndLinks>
           <NextLink href="/">
@@ -250,14 +317,12 @@ export const Layout = ({
                 Home
               </Link>
             </NextLink>
-            <NextLink href="/plan" passHref>
+            <NextLink href="/plan-your-trip" passHref>
               <Link
-                aria-disabled="true"
                 aria-label="Plan Your Trip to Console-ing Passions 2023"
-                isActive={isActive('/call')}
-                href="/plan"
+                isActive={isActive('/plan-your-trip')}
+                href="/plan-your-trip"
               >
-                <LinkDisabled>Coming Soon</LinkDisabled>
                 <Plane />
                 Plan Your Trip
               </Link>
@@ -289,7 +354,7 @@ export const Layout = ({
           </Links>
         </LogoAndLinks>
         <NavbarInfo>
-          <Heading css={{ fontSize: '$24' }}>June 22 - 24, 2023</Heading>
+          <Heading css={{ fontSize: '$22' }}>June 22 - 24, 2023</Heading>
           <Heading
             as={motion.a}
             css={{
@@ -299,13 +364,34 @@ export const Layout = ({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Gradient>@ University of Calgary</Gradient>
+            <Gradient>University of Calgary</Gradient>
           </Heading>
         </NavbarInfo>
+        <NavbarBorder />
       </Navbar>
 
-      {children}
+      {pathname === '/' ? null : (
+        <Breadcrumbs>
+          {[{ title: 'Home', href: '/' }, ...segments].map(
+            ({ title, href }, index) => (
+              <>
+                {index === segments.length ? (
+                  <>{title}</>
+                ) : (
+                  <NextLink key={`breadcrumb-link-${title}`} href={href}>
+                    {title}
+                  </NextLink>
+                )}
+                {index < segments.length && (
+                  <BreadcrumbDivider>/</BreadcrumbDivider>
+                )}
+              </>
+            )
+          )}
+        </Breadcrumbs>
+      )}
 
+      {children}
       <Footer variants={commonAnimationVariants}>
         {/* cSpell:disable */}
         <Content footer variants={contentVariants}>
