@@ -91,6 +91,8 @@ const Link = styled(motion.a, {
     position: 'relative',
     color: 'rgba(150, 114, 117, 0.3)',
     pointerEvents: 'none',
+    marginBottom: '$8',
+    paddingTop: '$8',
   },
 
   variants: {
@@ -126,7 +128,7 @@ const Link = styled(motion.a, {
 
 const LinkDisabled = styled('p', {
   position: 'absolute',
-  bottom: '-16px',
+  bottom: '-$16',
   right: 0,
   background: '$pinkGradient2',
   boxShadow: '$blue20',
