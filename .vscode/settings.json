@@ -17,5 +17,5 @@
     "yaml"
   ],
   "typescript.tsdk": "node_modules/typescript/lib",
-  "editor.suggest.showStatusBar": false
+  "editor.suggest.showStatusBar": false,
 }
