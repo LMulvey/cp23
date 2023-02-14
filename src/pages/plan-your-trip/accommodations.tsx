@@ -10,31 +10,6 @@ import { commonAnimationVariants } from '@/utilities/animation';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 
-const ComingSoon = styled('span', {
-  background: '$pinkGradient2',
-  boxShadow: '$blue20',
-  color: '$white',
-  opacity: 0.8,
-  fontSize: '$8',
-  textTransform: 'uppercase',
-  fontWeight: 700,
-  display: 'flex',
-  flexFlow: 'row nowrap',
-  justifyContent: 'center',
-  alignItems: 'center',
-  borderRadius: '$8',
-  padding: '$4 $8',
-  whiteSpace: 'nowrap',
-  '-webkit-backdrop-filter': 'blur(8px)',
-  backDropFilter: 'blur(8px)',
-  width: '100%',
-  '@bp3': {
-    flexFlow: 'row nowrap',
-    padding: '$8 $16',
-    width: 'auto',
-  },
-});
-
 const ModifiedHeadingMid = styled(HeadingMid, {
   display: 'flex',
   flexFlow: 'row wrap',
