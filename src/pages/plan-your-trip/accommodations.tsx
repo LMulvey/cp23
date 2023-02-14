@@ -182,7 +182,7 @@ const Accommodations: NextPage = () => {
         Passions 2023 within walking distance to the conference venue.{' '}
         <strong>
           These special reservation rates cut off <u>May 19th, 2023</u>. There
-          is a minimum of two night stay required.
+          is a minimum two night stay required.
         </strong>
       </Content>
 
