@@ -200,7 +200,7 @@ const NavbarBorder = styled(motion.div, {
   backgroundSize: '400% 400% !important',
   background: '$white',
   backgroundImage: '$pinkGradient2',
-  animation: `${NavbarGradient} 8s ease infinite`,
+  animation: `${NavbarGradient} 4s ease infinite`,
 });
 
 const LogoAndLinks = styled('div', {
@@ -230,8 +230,8 @@ const NavbarInfo = styled('div', {
 const Breadcrumbs = styled('div', {
   display: 'flex',
   flexFlow: 'row nowrap',
-  gap: '$8',
-  fontSize: '$16',
+  gap: '0',
+  fontSize: '$14',
   marginBottom: '$32',
   textAlign: 'left',
   width: '100%',
@@ -243,10 +243,14 @@ const Breadcrumbs = styled('div', {
       textDecoration: 'underline',
     },
   },
+
+  '@bp2': {
+    gap: '$4',
+    fontSize: '$16',
+  },
 });
 
 const BreadcrumbDivider = styled('span', {
-  fontSize: '$18',
   margin: '0 $8',
   color: '$defaultFont',
 });
@@ -377,7 +381,7 @@ export const Layout = ({
             ({ title, href }, index) => (
               <>
                 {index === segments.length ? (
-                  <>{title}</>
+                  <p key={`breadcrumb-link-${title}`}>{title}</p>
                 ) : (
                   <NextLink key={`breadcrumb-link-${title}`} href={href}>
                     {title}

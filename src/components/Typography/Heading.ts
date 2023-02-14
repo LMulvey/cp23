@@ -27,6 +27,19 @@ export const HeadingMid = styled(motion.h3, {
   },
 });
 
+export const HeadingSm = styled(motion.h4, {
+  color: '#333',
+  fontSize: '$20',
+  fontWeight: '700',
+  letterSpacing: '-$1',
+  lineHeight: 1,
+  textShadow: '$blue40',
+  '@bp2': {
+    alignSelf: 'start',
+    textAlign: 'left',
+  },
+});
+
 export const HeadingLink = styled(motion.a, {
   fontSize: '$26',
   fontWeight: '700',
