@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://www.consoleingpassions2023.ca/"
+          content="https://www.consoleingpassions2023.ca/?updated=20230214"
         />
         <meta property="og:title" content="Console-ing Passions 2023" />
         <meta
@@ -44,7 +44,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta
           property="og:image"
-          content="https://www.consoleingpassions2023.ca/images/og-image.png"
+          content="https://www.consoleingpassions2023.ca/images/og-image-feb-2023.png"
         />
         <meta property="twitter:card" content="summary_large_image" />
         <meta
@@ -58,7 +58,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta
           property="twitter:image"
-          content="https://www.consoleingpassions2023.ca/images/og-image.png"
+          content="https://www.consoleingpassions2023.ca/images/og-image-feb-2023.png"
         />
       </Head>
       <PointerProvider>
