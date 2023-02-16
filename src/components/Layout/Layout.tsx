@@ -8,7 +8,7 @@ import {
 import { HTMLMotionProps, motion } from 'framer-motion';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { ReactNode } from 'react';
+import { Fragment, ReactNode } from 'react';
 import { PageTitle } from '../PageTitle';
 import { Content } from '../Typography';
 import { BookOpenCheck, Plane, Star } from 'lucide-react';
@@ -379,18 +379,16 @@ export const Layout = ({
         <Breadcrumbs>
           {[{ title: 'Home', href: '/' }, ...segments].map(
             ({ title, href }, index) => (
-              <>
+              <Fragment key={`breadcrumb-link-${title}`}>
                 {index === segments.length ? (
-                  <p key={`breadcrumb-link-${title}`}>{title}</p>
+                  <p>{title}</p>
                 ) : (
-                  <NextLink key={`breadcrumb-link-${title}`} href={href}>
-                    {title}
-                  </NextLink>
+                  <NextLink href={href}>{title}</NextLink>
                 )}
                 {index < segments.length && (
                   <BreadcrumbDivider>/</BreadcrumbDivider>
                 )}
-              </>
+              </Fragment>
             )
           )}
         </Breadcrumbs>
