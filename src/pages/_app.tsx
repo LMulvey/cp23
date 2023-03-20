@@ -44,7 +44,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta
           property="og:image"
-          content="https://www.consoleingpassions2023.ca/images/og-image-feb-2023.png"
+          content="https://www.consoleingpassions2023.ca/images/og-image-march-23.png"
         />
         <meta property="twitter:card" content="summary_large_image" />
         <meta
@@ -58,7 +58,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta
           property="twitter:image"
-          content="https://www.consoleingpassions2023.ca/images/og-image-feb-2023.png"
+          content="https://www.consoleingpassions2023.ca/images/og-image-march-23.png"
         />
       </Head>
       <PointerProvider>
