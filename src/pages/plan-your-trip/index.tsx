@@ -7,40 +7,43 @@ import type { NextPage } from 'next';
 import Link from 'next/link';
 
 const Grid = styled('div', {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(4, 1fr)',
+  display: 'flex',
+  flexFlow: 'column nowrap',
   gap: '$8',
+  width: '100%',
+  padding: '0 $48',
 });
 
 const GridItem = styled('a', {
   display: 'flex',
-  flexFlow: 'column nowrap',
+  flexFlow: 'row nowrap',
   alignItems: 'center',
-  justifyContent: 'center',
-  gap: '$8',
+  gap: '$32',
   textAlign: 'center',
-  padding: '$32 $16',
+  padding: '$16 $32',
   borderRadius: '$8',
-  boxShadow: '$basic10',
+  boxShadow: 'none',
+  background: 'rgba(255, 255, 255, 0.44)',
   border: '1px solid rgba(0, 0, 0, 0.2)',
-  transition: 'box-shadow 120ms ease-in',
+  transition: 'box-shadow 175ms ease-in',
   transitionProperty: 'box-shadow, transform, background, color',
   fontSize: '$24',
   fontWeight: 700,
   textDecoration: 'none',
+  width: '100%',
+  '&:hover': {
+    boxShadow: '$basic10',
+    transform: 'scale(1.002)',
+  },
   '@supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent)':
     {
-      background: '$pinkGradient',
-      '-webkit-text-fill-color': 'transparent',
-      backgroundSize: '400% 400%',
-      backgroundClip: 'text',
+      '& p': {
+        background: '$pinkGradient',
+        '-webkit-text-fill-color': 'transparent',
+        backgroundSize: '400% 400%',
+        backgroundClip: 'text',
+      },
     },
-  '&:hover': {
-    color: '#f981b5',
-    boxShadow: '$basic24',
-    transform: 'scale(1.009)',
-    backgroundPosition: '0% 100%',
-  },
 });
 
 const Plan: NextPage = () => {
@@ -75,8 +78,8 @@ const Plan: NextPage = () => {
       <Grid>
         <Link href="/plan-your-trip/accommodations" passHref>
           <GridItem>
-            <BedDouble />
-            Accommodations
+            <BedDouble size={48} />
+            <p>Accommodations</p>
           </GridItem>
         </Link>
       </Grid>
