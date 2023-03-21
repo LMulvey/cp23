@@ -334,12 +334,10 @@ export const Layout = ({
             </NextLink>
             <NextLink href="/keynotes" passHref>
               <Link
-                aria-disabled="true"
                 aria-label="Keynotes attending Console-ing Passions 2023"
                 isActive={isActive('/keynotes')}
                 href="/keynotes"
               >
-                <LinkDisabled>Coming Soon</LinkDisabled>
                 <Star />
                 Keynotes
               </Link>
