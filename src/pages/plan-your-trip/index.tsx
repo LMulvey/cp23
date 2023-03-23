@@ -11,7 +11,12 @@ const Grid = styled('div', {
   flexFlow: 'column nowrap',
   gap: '$8',
   width: '100%',
-  padding: '0 $48',
+  '@bp0': {
+    padding: '0',
+  },
+  '@bp2': {
+    padding: '0 $48',
+  },
 });
 
 const GridItem = styled('a', {
@@ -20,17 +25,26 @@ const GridItem = styled('a', {
   alignItems: 'center',
   gap: '$32',
   textAlign: 'center',
-  padding: '$16 $32',
   borderRadius: '$8',
   boxShadow: 'none',
   background: 'rgba(255, 255, 255, 0.44)',
   border: '1px solid rgba(0, 0, 0, 0.2)',
   transition: 'box-shadow 175ms ease-in',
   transitionProperty: 'box-shadow, transform, background, color',
-  fontSize: '$24',
   fontWeight: 700,
   textDecoration: 'none',
   width: '100%',
+
+  '@bp0': {
+    padding: '$8',
+    fontSize: '$18',
+  },
+
+  '@bp2': {
+    padding: '$16 $32',
+    fontSize: '$24',
+  },
+
   '&:hover': {
     boxShadow: '$basic10',
     transform: 'scale(1.002)',
