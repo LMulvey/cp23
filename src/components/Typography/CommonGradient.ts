@@ -6,7 +6,7 @@ export const CommonGradient = styled(motion.span, {
   '@supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent)':
     {
       '-webkit-text-fill-color': 'transparent',
-      background: '$pinkGradient',
+      background: '$pinkGradient2',
       backgroundClip: 'text',
     },
 });

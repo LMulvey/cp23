@@ -58,11 +58,17 @@ const Home: NextPage = () => {
         Calgary.
       </Content>
       <Heading variants={commonAnimationVariants}>
-        Registration for{' '}
-        <CommonGradient>our conference is now open!</CommonGradient>
+        <CommonGradient>
+          Registration for our conference is now open!
+        </CommonGradient>
       </Heading>
       <HeadingMid
-        css={{ textAlign: 'center', marginTop: '$16', width: '100%' }}
+        css={{
+          '& > *': { color: '$defaultFont' },
+          textAlign: 'center',
+          marginTop: '$16',
+          width: '100%',
+        }}
         variants={commonAnimationVariants}
       >
         <a

@@ -289,7 +289,7 @@ export const Layout = ({
   const { pathname } = useRouter();
   const segments = getSegments(pathname);
   const isActive = (path: string) => {
-    return pathname === path;
+    return path.length > 1 ? pathname.includes(path) : pathname === path;
   };
 
   return (
