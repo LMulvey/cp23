@@ -1,10 +1,16 @@
 import { Layout } from '@/components/Layout';
-import { CommonGradient, Content, Heading } from '@/components/Typography';
+import {
+  CommonGradient,
+  Content,
+  Heading,
+  HeadingMid,
+} from '@/components/Typography';
 import {
   commonAnimationVariants,
   contentVariants,
 } from '@/utilities/animation';
 import { useReducedMotion } from 'framer-motion';
+import { UserCheck } from 'lucide-react';
 import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
@@ -52,9 +58,22 @@ const Home: NextPage = () => {
         Calgary.
       </Content>
       <Heading variants={commonAnimationVariants}>
-        We look forward{' '}
-        <CommonGradient>to seeing you next June!</CommonGradient>
+        Registration for{' '}
+        <CommonGradient>our conference is now open!</CommonGradient>
       </Heading>
+      <HeadingMid
+        css={{ textAlign: 'center', marginTop: '$16', width: '100%' }}
+        variants={commonAnimationVariants}
+      >
+        <a
+          aria-label="Console-ing Passions 2023 Registration via CVent"
+          href="https://eur.cvent.me/mnQQa"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <UserCheck /> Click here to register!
+        </a>
+      </HeadingMid>
     </Layout>
   );
 };

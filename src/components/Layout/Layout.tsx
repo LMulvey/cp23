@@ -11,7 +11,7 @@ import { useRouter } from 'next/router';
 import { Fragment, ReactNode } from 'react';
 import { PageTitle } from '../PageTitle';
 import { Content } from '../Typography';
-import { BookOpenCheck, Plane, Star } from 'lucide-react';
+import { BookOpenCheck, Plane, Star, User, UserCheck } from 'lucide-react';
 
 const Container = styled(motion.div, {
   width: '100vw',
@@ -127,10 +127,7 @@ const Link = styled(motion.a, {
   },
 });
 
-const LinkDisabled = styled('p', {
-  position: 'absolute',
-  bottom: '-$16',
-  right: 0,
+const LinkTag = styled('p', {
   background: '$pinkGradient2',
   boxShadow: '$blue20',
   color: '$white',
@@ -147,6 +144,7 @@ const LinkDisabled = styled('p', {
   whiteSpace: 'nowrap',
   '-webkit-backdrop-filter': 'blur(8px)',
   backDropFilter: 'blur(8px)',
+  marginLeft: '$8',
 });
 
 const ImageContainer = styled(motion.div, {
@@ -218,7 +216,7 @@ const LogoAndLinks = styled('div', {
 
 const Footer = styled(motion.div, {
   borderTop: '1px solid rgba(0, 0, 0, 0.2)',
-  marginTop: '$32',
+  margin: '$32 0',
   paddingTop: '$32',
 });
 
@@ -342,18 +340,17 @@ export const Layout = ({
                 Keynotes
               </Link>
             </NextLink>
-            <NextLink href="/call-for-papers" passHref>
-              <Link
-                aria-disabled="true"
-                aria-label="Console-ing Passions 2023 Call for Papers Submission"
-                isActive={isActive('/call-for-papers')}
-                href="/call-for-papers"
-              >
-                <LinkDisabled>Now Closed</LinkDisabled>
-                <BookOpenCheck />
-                Call for Papers
-              </Link>
-            </NextLink>
+            <Link
+              as="a"
+              aria-label="Console-ing Passions 2023 Registration via CVent"
+              href="https://eur.cvent.me/mnQQa"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <UserCheck />
+              Register
+              <LinkTag>NEW!</LinkTag>
+            </Link>
           </Links>
         </LogoAndLinks>
         <NavbarInfo>
