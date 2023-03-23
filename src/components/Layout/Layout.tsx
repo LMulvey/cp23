@@ -11,7 +11,7 @@ import { useRouter } from 'next/router';
 import { Fragment, ReactNode } from 'react';
 import { PageTitle } from '../PageTitle';
 import { Content } from '../Typography';
-import { BookOpenCheck, Plane, Star, User, UserCheck } from 'lucide-react';
+import { Plane, Star, UserCheck } from 'lucide-react';
 
 const Container = styled(motion.div, {
   width: '100vw',
