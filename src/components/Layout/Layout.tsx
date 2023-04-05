@@ -393,13 +393,13 @@ export const Layout = ({
       <Footer variants={commonAnimationVariants}>
         {/* cSpell:disable */}
         <Content footer variants={contentVariants}>
-          Calgary is located in the traditional territories of the people of the
-          Treaty 7 region in Southern Alberta, which includes the Blackfoot
-          Confederacy (comprising the Siksika, Piikani, and Kainai First
-          Nations), as well as the Tsuut&apos;ina First Nation, and the Stoney
-          Nakoda (including the Chiniki, Bearspaw, and Wesley First Nations).
-          The city of Calgary is also home to the Métis Nation of Alberta,
-          Region 3.
+          The University of Calgary, located in the heart of Southern Alberta,
+          both acknowledges and pays tribute to the traditional territories of
+          the peoples of Treaty 7, which include the Blackfoot Confederacy
+          (comprised of the Siksika, the Piikani, and the Kainai First Nations),
+          the Tsuut&apos;ina First Nation, and the Stoney Nakoda (including
+          Chiniki, Bearspaw, and Goodstoney First Nations). The City of Calgary
+          is also home to the Métis Nation of Alberta Region 3.
         </Content>
         {/* cSpell:enable */}
       </Footer>
