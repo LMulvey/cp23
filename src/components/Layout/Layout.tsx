@@ -11,7 +11,7 @@ import { useRouter } from 'next/router';
 import { Fragment, ReactNode } from 'react';
 import { PageTitle } from '../PageTitle';
 import { Content } from '../Typography';
-import { Plane, Star, UserCheck } from 'lucide-react';
+import { FileHeart, Plane, Star, UserCheck } from 'lucide-react';
 
 const Container = styled(motion.div, {
   width: '100vw',
@@ -330,6 +330,16 @@ export const Layout = ({
                 Plan Your Trip
               </Link>
             </NextLink>
+            <Link
+              aria-label="Console-ing Passions 2023 Program"
+              href="https://www.openconf.org/consoleingpassions2023/openconf.php"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FileHeart />
+              Program
+              <LinkTag>NEW!</LinkTag>
+            </Link>
             <NextLink href="/keynotes" passHref>
               <Link
                 aria-label="Keynotes attending Console-ing Passions 2023"
