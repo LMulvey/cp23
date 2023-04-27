@@ -2,19 +2,20 @@ import { Layout } from '@/components/Layout';
 import { Content, Heading } from '@/components/Typography';
 import { styled } from '@/stitches';
 import { commonAnimationVariants } from '@/utilities/animation';
-import { BedDouble } from 'lucide-react';
+import { BedDouble, Car } from 'lucide-react';
 import type { NextPage } from 'next';
 import Link from 'next/link';
 
 const Grid = styled('div', {
   display: 'flex',
-  flexFlow: 'column nowrap',
   gap: '$8',
   width: '100%',
   '@bp0': {
+    flexFlow: 'row wrap',
     padding: '0',
   },
   '@bp2': {
+    flexFlow: 'row nowrap',
     padding: '0 $48',
   },
 });
@@ -33,9 +34,9 @@ const GridItem = styled('a', {
   transitionProperty: 'box-shadow, transform, background, color',
   fontWeight: 700,
   textDecoration: 'none',
-  width: '100%',
 
   '@bp0': {
+    width: ' 100%',
     padding: '$8',
     fontSize: '$18',
   },
@@ -94,6 +95,12 @@ const Plan: NextPage = () => {
           <GridItem>
             <BedDouble size={48} />
             <p>Accommodations</p>
+          </GridItem>
+        </Link>
+        <Link href="/plan-your-trip/transportation" passHref>
+          <GridItem>
+            <Car size={48} />
+            <p>Transportation</p>
           </GridItem>
         </Link>
       </Grid>
