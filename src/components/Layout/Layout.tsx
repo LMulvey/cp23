@@ -301,7 +301,7 @@ export const Layout = ({
             <ImageContainer>
               <Image
                 alt="Console-ing Passions logo"
-                src="/images/cp-logo.svg"
+                src="/images/cp-logo-2023.svg"
                 width="213px"
                 height="57px"
                 layout="intrinsic"

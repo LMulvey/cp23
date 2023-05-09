@@ -55,7 +55,7 @@ const OG = () => {
       <ImageContainer>
         <Image
           alt="Console-ing Passions logo"
-          src="/images/cp-logo.svg"
+          src="/images/cp-logo-2023.svg"
           width="1704px"
           height="456px"
           layout="intrinsic"
