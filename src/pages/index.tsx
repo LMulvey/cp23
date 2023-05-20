@@ -5,13 +5,22 @@ import {
   Heading,
   HeadingMid,
 } from '@/components/Typography';
+import { styled } from '@/stitches';
 import {
   commonAnimationVariants,
   contentVariants,
 } from '@/utilities/animation';
-import { useReducedMotion } from 'framer-motion';
+import { useReducedMotion, motion } from 'framer-motion';
 import { UserCheck } from 'lucide-react';
 import type { NextPage } from 'next';
+import Image from 'next/image';
+
+const LogoContainer = styled(motion.div, {
+  display: 'flex',
+  justifyContent: 'center',
+  marginBottom: '$32',
+  width: '100%',
+});
 
 const Home: NextPage = () => {
   const shouldReduceMotion = useReducedMotion();
@@ -80,6 +89,33 @@ const Home: NextPage = () => {
           <UserCheck /> Click here to register!
         </a>
       </HeadingMid>
+      <Content
+        small
+        css={{
+          fontStyle: 'italic',
+          marginTop: '$44',
+          paddingTop: '$44',
+          marginBottom: 0,
+        }}
+        variants={contentVariants}
+      >
+        We are grateful for the support of our UCalgary sponsors: Calgary
+        Institute for the Humanities, Department of Communication, Media and
+        Film, Department of English, Department of Sociology, Environmental
+        Media Lab, Faculty of Arts, Faculty of Graduate Studies, and the Taylor
+        Institute for Teaching and Learning. Console-ing Passions 2023 is
+        supported in part by funding from the Social Sciences and Humanities
+        Research Council.
+      </Content>
+      <LogoContainer variants={commonAnimationVariants}>
+        <Image
+          src="/images/sshrc-logo.png"
+          width={431}
+          height={54}
+          layout="intrinsic"
+          alt="SSHRC Logo"
+        />
+      </LogoContainer>
     </Layout>
   );
 };
