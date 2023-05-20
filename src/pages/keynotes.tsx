@@ -61,6 +61,18 @@ const ImageContainer = styled('div', {
   },
 });
 
+const Talk = styled('div', {
+  background: 'rgba(255, 255, 255, 0.5)',
+  borderRadius: '$8',
+  padding: '$16',
+  marginTop: '$8',
+
+  '& h2': {
+    fontWeight: 700,
+    fontSize: '$24',
+  },
+});
+
 const Keynotes: NextPage = () => {
   return (
     <Layout
@@ -88,6 +100,54 @@ const Keynotes: NextPage = () => {
         We are pleased to announce our keynote speakers for 2023! We are excited
         to have them join us for this year&apos;s conference.
       </Content>
+      <GridItem>
+        <ImageContainer>
+          <Image
+            alt="Dr. Sarah Sharma"
+            src="/images/keynotes/sarah.webp"
+            layout="fill"
+            objectFit="cover"
+          />
+        </ImageContainer>
+        <NameAndBio>
+          <Heading css={{ textAlign: 'left', color: '$pink2' }}>
+            Dr. Sarah Sharma
+          </Heading>
+          <Content css={{ textAlign: 'left' }} small>
+            Sarah Sharma is Associate Professor of Media Theory and Director of
+            the Institute of Communication, Culture, Information and Technology
+            (ICCIT) at the University of Toronto. She is the author of{' '}
+            <em>In the Meantime: Temporality and Cultural Politics</em> (Duke
+            UP, 2014). This book challenges the popular sentiment that the world
+            is &ldquo;speeding up&rdquo; and locates instead how temporality
+            operates as a key relation of power structured at the intersection
+            of a range of social differences and technologies. Her edited volume
+            (with Rianka Singh){' '}
+            <em>
+              Re-Understanding Media: Feminist Extensions of Marshall McLuhan
+            </em>{' '}
+            (Duke UP 2022) highlights her time as director of the McLuhan Centre
+            between 2017-2022 and retrieves a feminist version of &ldquo;the
+            medium is the message.&rdquo; Sarah is currently working on a new
+            book (tentatively titled To Be Determined) which advances a
+            techno-feminist media theory to account for Big Tech and the
+            gendered politics of utility, exit and repair.
+            <Talk>
+              <h2>Title & Abstract TBD</h2>
+              {/* <Content css={{ textAlign: 'left' }} small>
+                ABSTRACT
+              </Content> */}
+              <strong>
+                Thursday, June 22
+                <br />
+                10:30 am - 12:00 pm
+              </strong>
+              <br />
+              The Forum, Taylor Institute for Teaching and Learning
+            </Talk>
+          </Content>
+        </NameAndBio>
+      </GridItem>
       <Grid>
         <GridItem>
           <ImageContainer>
@@ -115,6 +175,43 @@ const Keynotes: NextPage = () => {
               Books, 2019). She is currently researching a burgeoning, women-led
               and -centered Nigerian Pentecostal self-help scene. She has a PhD
               in Gender and Cultural Studies from King&apos;s College London.
+              <Talk>
+                <h2>
+                  Beyond &lsquo;Reifying Whiteness&rsquo; in Feminist Media
+                  Studies
+                </h2>
+                <Content css={{ textAlign: 'left' }} small>
+                  In this talk, I turn a black and transnational feminist
+                  reflexive eye on the field of feminist media studies, to
+                  surface for critical consideration a certain &lsquo;story that
+                  we tell&rsquo; (Hemmings, 2005) about race, more specifically
+                  about the visibly dominant whiteness, in the global North, of
+                  the kinds of media texts and cultures that commonly comprise
+                  our objects of analysis. I show that there is a repeated
+                  critical claim to the effect that the texts and cultures
+                  &lsquo;reify whiteness.&rsquo; Interrogating and faulting some
+                  of the variously methodological, epistemological and
+                  ontological premises and effects of the claim, I argue that it
+                  is itself performative: it contributes to the very reification
+                  that it decries, not least by seemingly serving to explain and
+                  justify why, in a given piece of scholarship, further
+                  questions about race cannot really be attended to. I suggest
+                  some of the ways in which we might go beyond &lsquo;reifying
+                  whiteness&rsquo; in feminist media studies, so that we can
+                  attempt to offer more complete and rigorous consideration of
+                  the racial politics of what we study and how, and indeed who
+                  we are, our various positionalities, as not only scholars of
+                  media but also at the same time, necessarily, consumers and
+                  users too.
+                </Content>
+                <strong>
+                  Friday, June 23
+                  <br />
+                  11:00 am - 12:30 pm
+                </strong>
+                <br />
+                The Forum, Taylor Institute for Teaching and Learning
+              </Talk>
             </Content>
           </NameAndBio>
         </GridItem>
@@ -150,6 +247,23 @@ const Keynotes: NextPage = () => {
                 <em>How to Fail as a Popstar</em>, for television with the
                 support of CBC.
               </aside>
+
+              <Talk>
+                <h2>Vivek Shraya&apos;s Feminist Lens</h2>
+                <Content css={{ textAlign: 'left' }} small>
+                  Vivek Shraya journeys through her 20+ multi disciplinary
+                  practice to highlight her approach to creating art that
+                  reclaims and centers femininity, and the challenges and joys
+                  of making work from and for the female gaze.
+                </Content>
+                <strong>
+                  Saturday, June 24
+                  <br />
+                  2:15 pm - 3:45 pm
+                </strong>
+                <br />
+                The Forum, Taylor Institute for Teaching and Learning
+              </Talk>
             </Content>
           </NameAndBio>
           <ImageContainer>
@@ -160,42 +274,6 @@ const Keynotes: NextPage = () => {
               objectFit="cover"
             />
           </ImageContainer>
-        </GridItem>
-
-        <GridItem>
-          <ImageContainer>
-            <Image
-              alt="Dr. Sarah Sharma"
-              src="/images/keynotes/sarah.webp"
-              layout="fill"
-              objectFit="cover"
-            />
-          </ImageContainer>
-          <NameAndBio>
-            <Heading css={{ textAlign: 'left', color: '$pink2' }}>
-              Dr. Sarah Sharma
-            </Heading>
-            <Content css={{ textAlign: 'left' }} small>
-              Sarah Sharma is Associate Professor of Media Theory and Director
-              of the Institute of Communication, Culture, Information and
-              Technology (ICCIT) at the University of Toronto. She is the author
-              of <em>In the Meantime: Temporality and Cultural Politics</em>{' '}
-              (Duke UP, 2014). This book challenges the popular sentiment that
-              the world is &ldquo;speeding up&rdquo; and locates instead how
-              temporality operates as a key relation of power structured at the
-              intersection of a range of social differences and technologies.
-              Her edited volume (with Rianka Singh){' '}
-              <em>
-                Re-Understanding Media: Feminist Extensions of Marshall McLuhan
-              </em>{' '}
-              (Duke UP 2022) highlights her time as director of the McLuhan
-              Centre between 2017-2022 and retrieves a feminist version of
-              &ldquo;the medium is the message.&rdquo; Sarah is currently
-              working on a new book (tentatively titled To Be Determined) which
-              advances a techno-feminist media theory to account for Big Tech
-              and the gendered politics of utility, exit and repair.
-            </Content>
-          </NameAndBio>
         </GridItem>
       </Grid>
     </Layout>
