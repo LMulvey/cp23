@@ -109,7 +109,7 @@ const Home: NextPage = () => {
       </Content>
       <LogoContainer variants={commonAnimationVariants}>
         <Image
-          src="/images/sshrc-logo.png"
+          src="/images/sshrc-logo-2.png"
           width={431}
           height={54}
           layout="intrinsic"
