@@ -12,6 +12,7 @@ import { Fragment, ReactNode } from 'react';
 import { PageTitle } from '../PageTitle';
 import { Content } from '../Typography';
 import { FileHeart, Plane, Star, UserCheck } from 'lucide-react';
+import { pxToRem } from '@/utilities/pxToRem';
 
 const Container = styled(motion.div, {
   width: '100vw',
@@ -148,6 +149,9 @@ const LinkTag = styled('p', {
 });
 
 const ImageContainer = styled(motion.div, {
+  position: 'relative',
+  width: pxToRem(250),
+  height: pxToRem(94),
   '&:hover': {
     cursor: 'pointer',
   },
@@ -186,6 +190,11 @@ const Navbar = styled(motion.div, {
     alignItems: 'center',
     justifyContent: 'space-between',
     flexFlow: 'row nowrap',
+  },
+
+  '& svg': {
+    height: '$24',
+    width: '$24',
   },
 });
 
@@ -302,9 +311,8 @@ export const Layout = ({
               <Image
                 alt="Console-ing Passions logo"
                 src="/images/cp-logo-2023.svg"
-                width="213px"
-                height="57px"
-                layout="intrinsic"
+                layout="fill"
+                objectFit="contain"
                 priority
               />
             </ImageContainer>

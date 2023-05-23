@@ -74,6 +74,7 @@ export const sizes = {
   208: pxToRem(208),
   220: pxToRem(220),
   240: pxToRem(240),
+  264: pxToRem(264),
   280: pxToRem(280),
   288: pxToRem(288),
   300: pxToRem(300),
