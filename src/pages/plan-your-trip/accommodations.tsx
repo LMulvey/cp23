@@ -156,7 +156,7 @@ const Accommodations: NextPage = () => {
         There are limited on-campus accommodations available for Console-ing
         Passions 2023 within walking distance to the conference venue.{' '}
         <strong>
-          These special reservation rates cut off <u>May 19th, 2023</u>. There
+          These special reservation rates cut off <u>June 14th, 2023</u>. There
           is a minimum two night stay required.
         </strong>
       </Content>
