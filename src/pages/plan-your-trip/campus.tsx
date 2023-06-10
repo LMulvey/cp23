@@ -46,9 +46,16 @@ const Campus: NextPage = () => {
         >
           Taylor Family Digital Library
         </a>
-        . The University of Calgary&apos;s interactive map is a great resource
-        for finding amenities around campus. Over the summer, some businesses
-        and vendors are operating on reduced hours.
+        . The{' '}
+        <a
+          href="https://ucalgary-gs.maps.arcgis.com/apps/webappviewer/index.html?id=2e1817b41cb64815a50f617593aabf4e"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          University of Calgary&apos;s interactive map
+        </a>{' '}
+        is a great resource for finding amenities around campus. Over the
+        summer, some businesses and vendors are operating on reduced hours.
       </Content>
 
       <HeadingMid

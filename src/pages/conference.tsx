@@ -117,7 +117,7 @@ const Conference: NextPage = () => {
           rel="noopener noreferrer"
         >
           <Film size={48} />
-          <p>Analogue Revolution</p>
+          <p>Screening</p>
         </GridItem>
       </Grid>
     </Layout>

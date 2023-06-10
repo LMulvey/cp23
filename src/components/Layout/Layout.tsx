@@ -360,6 +360,7 @@ export const Layout = ({
             >
               <UserCheck />
               Register
+              <LinkTag>Closes June 11th!</LinkTag>
             </Link>
           </Links>
         </LogoAndLinks>
