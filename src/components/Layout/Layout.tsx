@@ -11,7 +11,7 @@ import { useRouter } from 'next/router';
 import { Fragment, ReactNode } from 'react';
 import { PageTitle } from '../PageTitle';
 import { Content } from '../Typography';
-import { FileHeart, Plane, Star, UserCheck } from 'lucide-react';
+import { Component as ConferenceIcon, Plane, UserCheck } from 'lucide-react';
 import { pxToRem } from '@/utilities/pxToRem';
 
 const Container = styled(motion.div, {
@@ -71,7 +71,7 @@ const Links = styled(motion.div, {
 const Link = styled(motion.a, {
   color: '#967275',
   textShadow: '$blue40',
-  fontSize: '$18',
+  fontSize: '$14',
   fontWeight: '600',
   textAlign: 'center',
   letterSpacing: '-$1',
@@ -336,28 +336,21 @@ export const Layout = ({
               >
                 <Plane />
                 Plan Your Trip
+                <LinkTag>UPDATED!</LinkTag>
               </Link>
             </NextLink>
-            <Link
-              aria-label="Console-ing Passions 2023 Program"
-              href="https://www.openconf.org/consoleingpassions2023/openconf.php"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FileHeart />
-              Program
-              <LinkTag>NEW!</LinkTag>
-            </Link>
-            <NextLink href="/keynotes" passHref>
+            <NextLink href="/conference" passHref>
               <Link
-                aria-label="Keynotes attending Console-ing Passions 2023"
-                isActive={isActive('/keynotes')}
-                href="/keynotes"
+                aria-label="Console-ing Passions 2023 Conference Info"
+                isActive={isActive('/conference')}
+                href="/conference"
               >
-                <Star />
-                Keynotes
+                <ConferenceIcon />
+                Conference Information
+                <LinkTag>NEW!</LinkTag>
               </Link>
             </NextLink>
+
             <Link
               as="a"
               aria-label="Console-ing Passions 2023 Registration via CVent"
@@ -367,7 +360,6 @@ export const Layout = ({
             >
               <UserCheck />
               Register
-              <LinkTag>NEW!</LinkTag>
             </Link>
           </Links>
         </LogoAndLinks>

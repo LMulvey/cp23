@@ -7,6 +7,7 @@ export const Content = styled(motion.p, {
   fontWeight: '400',
   lineHeight: 1.34,
   marginBottom: '$48',
+  width: '100%',
   textAlign: 'center',
   variants: {
     footer: {

@@ -2,7 +2,7 @@ import { Layout } from '@/components/Layout';
 import { Content, Heading } from '@/components/Typography';
 import { styled } from '@/stitches';
 import { commonAnimationVariants } from '@/utilities/animation';
-import { BedDouble, Car, DollarSign } from 'lucide-react';
+import { BedDouble, Building2, Car, DollarSign } from 'lucide-react';
 import type { NextPage } from 'next';
 import Link from 'next/link';
 
@@ -91,6 +91,12 @@ const Plan: NextPage = () => {
         information as it becomes available.
       </Content>
       <Grid>
+        <Link href="/plan-your-trip/campus" passHref>
+          <GridItem>
+            <Building2 size={48} />
+            <p>Campus</p>
+          </GridItem>
+        </Link>
         <Link href="/plan-your-trip/student-travel-grants" passHref>
           <GridItem>
             <DollarSign size={48} />
