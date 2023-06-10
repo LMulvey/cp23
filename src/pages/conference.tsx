@@ -66,7 +66,7 @@ const Conference: NextPage = () => {
     <Layout
       animate="animate"
       initial="animate"
-      title="Plan Your Trip"
+      title="Conference Information"
       variants={{
         visible: {
           transition: {
@@ -91,17 +91,15 @@ const Conference: NextPage = () => {
         events!
       </Content>
       <Grid>
-        <Link
+        <GridItem
           aria-label="Console-ing Passions 2023 Program"
           href="https://www.openconf.org/consoleingpassions2023/openconf.php"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <GridItem>
-            <FileHeart size={48} />
-            <p>Program</p>
-          </GridItem>
-        </Link>
+          <FileHeart size={48} />
+          <p>Program</p>
+        </GridItem>
         <Link
           aria-label="Keynotes attending Console-ing Passions 2023"
           href="/keynotes"
@@ -111,18 +109,15 @@ const Conference: NextPage = () => {
             <p>Keynotes</p>
           </GridItem>
         </Link>
-        <Link
-          as="a"
+        <GridItem
           aria-label="Analogue Revolution Screening"
           href="/files/analogue-revolution-screening-v1.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <GridItem>
-            <Film size={48} />
-            <p>Analogue Revolution</p>
-          </GridItem>
-        </Link>
+          <Film size={48} />
+          <p>Analogue Revolution</p>
+        </GridItem>
       </Grid>
     </Layout>
   );
