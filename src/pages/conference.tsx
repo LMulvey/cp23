@@ -103,6 +103,7 @@ const Conference: NextPage = () => {
         <Link
           aria-label="Keynotes attending Console-ing Passions 2023"
           href="/keynotes"
+          passHref
         >
           <GridItem>
             <Star size={48} />

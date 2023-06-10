@@ -1,5 +1,5 @@
 import { Layout } from '@/components/Layout';
-import { CommonGradient, Content, Heading } from '@/components/Typography';
+import { Content, Heading } from '@/components/Typography';
 import { styled } from '@/stitches';
 import {
   commonAnimationVariants,
@@ -42,29 +42,6 @@ const Home: NextPage = () => {
       viewport={{ once: true }}
       whileInView="visible"
     >
-      <Heading
-        as={motion.a}
-        aria-label="Console-ing Passions 2023 Registration via CVent"
-        css={{
-          fontSize: '$24',
-          textDecoration: 'none',
-          marginBottom: '$32',
-          background: 'rgba(255, 255, 255, 0.7)',
-          border: '$sizes$1 solid $white',
-          padding: '$24',
-          borderRadius: '$8',
-          width: '100%',
-          textAlign: 'center',
-        }}
-        href="https://eur.cvent.me/mnQQa"
-        target="_blank"
-        rel="noopener noreferrer"
-        variants={commonAnimationVariants}
-      >
-        <CommonGradient>
-          Registration is open - click here to register!
-        </CommonGradient>
-      </Heading>
       <Content css={{ marginBottom: 0 }} variants={contentVariants}>
         <strong>
           The 2023 Console-ing Passions: International Conference on Television,

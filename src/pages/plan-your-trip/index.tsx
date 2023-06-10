@@ -7,15 +7,15 @@ import type { NextPage } from 'next';
 import Link from 'next/link';
 
 const Grid = styled('div', {
-  display: 'flex',
+  display: 'grid',
   gap: '$8',
   width: '100%',
   '@bp0': {
-    flexFlow: 'row wrap',
+    gridTemplateColumns: '1fr',
     padding: '0',
   },
-  '@bp2': {
-    flexFlow: 'row nowrap',
+  '@bp3': {
+    gridTemplateColumns: 'repeat(2, 1fr)',
     padding: '0 $48',
   },
 });
@@ -34,9 +34,9 @@ const GridItem = styled('a', {
   transitionProperty: 'box-shadow, transform, background, color',
   fontWeight: 700,
   textDecoration: 'none',
+  width: '100%',
 
   '@bp0': {
-    width: ' 100%',
     padding: '$8',
     fontSize: '$18',
   },
