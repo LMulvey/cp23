@@ -1,17 +1,12 @@
 import { Layout } from '@/components/Layout';
-import {
-  CommonGradient,
-  Content,
-  Heading,
-  HeadingMid,
-} from '@/components/Typography';
+import { CommonGradient, Content, Heading } from '@/components/Typography';
 import { styled } from '@/stitches';
 import {
   commonAnimationVariants,
   contentVariants,
+  dividerAnimationVariants,
 } from '@/utilities/animation';
 import { useReducedMotion, motion } from 'framer-motion';
-import { UserCheck } from 'lucide-react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 
@@ -20,6 +15,13 @@ const LogoContainer = styled(motion.div, {
   justifyContent: 'center',
   marginBottom: '$32',
   width: '100%',
+});
+
+const Divider = styled(motion.div, {
+  height: '$1',
+  width: '100%',
+  background: 'rgba(0, 0, 0, 0.2)',
+  margin: '$16 0',
 });
 
 const Home: NextPage = () => {
@@ -40,7 +42,30 @@ const Home: NextPage = () => {
       viewport={{ once: true }}
       whileInView="visible"
     >
-      <Content variants={contentVariants}>
+      <Heading
+        as={motion.a}
+        aria-label="Console-ing Passions 2023 Registration via CVent"
+        css={{
+          fontSize: '$24',
+          textDecoration: 'none',
+          marginBottom: '$32',
+          background: 'rgba(255, 255, 255, 0.7)',
+          border: '$sizes$1 solid $white',
+          padding: '$24',
+          borderRadius: '$8',
+          width: '100%',
+          textAlign: 'center',
+        }}
+        href="https://eur.cvent.me/mnQQa"
+        target="_blank"
+        rel="noopener noreferrer"
+        variants={commonAnimationVariants}
+      >
+        <CommonGradient>
+          Registration is open - click here to register!
+        </CommonGradient>
+      </Heading>
+      <Content css={{ marginBottom: 0 }} variants={contentVariants}>
         <strong>
           The 2023 Console-ing Passions: International Conference on Television,
           Video, Audio, New Media and Feminism
@@ -58,54 +83,49 @@ const Home: NextPage = () => {
         <strong>
           <time dateTime="2023-06-22">June 22 - 24, 2023</time>
         </strong>
-        .
+        .<br />
       </Content>
+      <Divider variants={dividerAnimationVariants} />
       <Content variants={contentVariants}>
         <strong>Console-ing Passions 2023</strong> is organized by Jessalynn
         Keller, Alora Paulsen Mulvey, Tamara Shepherd and Samantha Thrift from
         the Department of Communication, Media and Film at the University of
         Calgary.
       </Content>
-      <Heading variants={commonAnimationVariants}>
-        <CommonGradient>
-          Registration for our conference is now open!
-        </CommonGradient>
-      </Heading>
-      <HeadingMid
+
+      <Heading
         css={{
-          '& > *': { color: '$defaultFont' },
-          textAlign: 'center',
-          marginTop: '$16',
-          width: '100%',
+          fontSize: '$24',
         }}
         variants={commonAnimationVariants}
       >
-        <a
-          aria-label="Console-ing Passions 2023 Registration via CVent"
-          href="https://eur.cvent.me/mnQQa"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <UserCheck /> Click here to register!
-        </a>
-      </HeadingMid>
+        The CP2023 UCalgary committee would like to thank the following UCalgary
+        financial sponsors:
+      </Heading>
+
       <Content
         small
         css={{
           fontStyle: 'italic',
-          marginTop: '$44',
-          paddingTop: '$44',
           marginBottom: 0,
         }}
         variants={contentVariants}
       >
-        We are grateful for the support of our UCalgary sponsors: Calgary
-        Institute for the Humanities, Department of Communication, Media and
-        Film, Department of English, Department of Sociology, Environmental
-        Media Lab, Faculty of Arts, Faculty of Graduate Studies, and the Taylor
-        Institute for Teaching and Learning. Console-ing Passions 2023 is
-        supported in part by funding from the Social Sciences and Humanities
-        Research Council.
+        Calgary Institute for the Humanities, Department of Communication, Media
+        and Film, Department of English, Department of Sociology, Environmental
+        Media Lab, Faculty of Arts, Faculty of Graduate Studies, and Taylor
+        Institute for Teaching and Learning.
+      </Content>
+      <Content
+        small
+        css={{
+          fontStyle: 'italic',
+          marginBottom: 0,
+        }}
+        variants={contentVariants}
+      >
+        We are also very grateful for the financial support we received from the
+        Social Sciences and Humanities Research Council of Canada. Thank you!
       </Content>
       <LogoContainer variants={commonAnimationVariants}>
         <Image
@@ -116,6 +136,67 @@ const Home: NextPage = () => {
           alt="SSHRC Logo"
         />
       </LogoContainer>
+
+      <Heading
+        css={{
+          marginTop: '$16',
+          fontSize: '$24',
+          color: '$defaultFont',
+        }}
+        variants={commonAnimationVariants}
+      >
+        Huge thanks to our fab team of reviewers:
+      </Heading>
+
+      <Content
+        small
+        css={{
+          fontStyle: 'italic',
+          marginBottom: 0,
+        }}
+        variants={contentVariants}
+      >
+        Julia Chan, Melissa Click, Hunter Hargraves, Julia Himberg, Charlotte
+        Howell, Jessalynn Keller, Deborah Jermyn, Amanda Ann Klein, Al Martin,
+        Alora Paulsen Mulvey, Andrew Owens, Tamara Shepherd, Samantha Thrift,
+        Jacqueline Vickery
+      </Content>
+
+      <Heading
+        css={{
+          marginTop: '$16',
+          fontSize: '$24',
+          color: '$defaultFont',
+        }}
+        variants={commonAnimationVariants}
+      >
+        And thank you to our UCalgary volunteer team:
+      </Heading>
+
+      <Content
+        small
+        css={{
+          fontStyle: 'italic',
+          marginBottom: 0,
+        }}
+        variants={contentVariants}
+      >
+        Leslie Salgado Arzuaga, Asma Bernier, Emilie Charette, Crystal Chokshi,
+        Shena Kaul, Mary Keller, Claire O'Brien, J Overholser, Pamela Pan,
+        Rebecca Wissink, Amanda Zanco.
+      </Content>
+      <Content
+        small
+        css={{
+          fontStyle: 'italic',
+          marginBottom: 0,
+        }}
+        variants={contentVariants}
+      >
+        A special thanks to Dr Charles Tepperman, CMF Dept. Head, for his
+        steadfast support of the conference, and the CMF admin team for
+        providing administrative assistance.
+      </Content>
     </Layout>
   );
 };

@@ -1,10 +1,17 @@
 export const commonAnimationVariants = {
-  hidden: { opacity: 0, x: '-10px', y: '10px' },
+  hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: { stiffness: 50, type: 'spring' },
-    x: 0,
-    y: 0,
+  },
+};
+
+export const dividerAnimationVariants = {
+  hidden: { opacity: 0, scaleX: 0 },
+  visible: {
+    opacity: 1,
+    transition: { stiffness: 50, type: 'spring' },
+    scaleX: 1,
   },
 };
 
