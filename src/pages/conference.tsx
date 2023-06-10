@@ -2,7 +2,7 @@ import { Layout } from '@/components/Layout';
 import { Content, Heading } from '@/components/Typography';
 import { styled } from '@/stitches';
 import { commonAnimationVariants } from '@/utilities/animation';
-import { FileHeart, FilmIcon, Star } from 'lucide-react';
+import { FileHeart, Film, Star } from 'lucide-react';
 import type { NextPage } from 'next';
 import Link from 'next/link';
 
@@ -119,7 +119,7 @@ const Conference: NextPage = () => {
           rel="noopener noreferrer"
         >
           <GridItem>
-            <FilmIcon size={48} />
+            <Film size={48} />
             <p>Analogue Revolution</p>
           </GridItem>
         </Link>
