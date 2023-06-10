@@ -1,16 +1,7 @@
 import { Layout } from '@/components/Layout';
 import { Content, Heading, HeadingMid } from '@/components/Typography';
-import { styled } from '@/stitches';
 import { commonAnimationVariants } from '@/utilities/animation';
 import type { NextPage } from 'next';
-
-const List = styled('ol', {
-  marginTop: '$8',
-  '& li': {
-    paddingLeft: '$8',
-    margin: '$16 0',
-  },
-});
 
 const Campus: NextPage = () => {
   return (
