@@ -151,7 +151,9 @@ const Keynotes: NextPage = () => {
         </GridItem>
         <Talk>
           <Content>
-            <h2>Title & Abstract TBD</h2>
+            <h2>
+              To Be Determined: On the possibility of feminist techno-logics
+            </h2>
             {/* <Content css={{ textAlign: 'left' }} small>
                 ABSTRACT
               </Content> */}

@@ -182,7 +182,7 @@ const Home: NextPage = () => {
         variants={contentVariants}
       >
         Leslie Salgado Arzuaga, Asma Bernier, Emilie Charette, Crystal Chokshi,
-        Shena Kaul, Mary Keller, Claire O'Brien, J Overholser, Pamela Pan,
+        Shena Kaul, Mary Keller, Claire O&apos;Brien, J Overholser, Pamela Pan,
         Rebecca Wissink, Amanda Zanco.
       </Content>
       <Content
