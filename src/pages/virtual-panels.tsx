@@ -2,10 +2,8 @@ import { Layout } from '@/components/Layout';
 import { Content, Heading, HeadingMid } from '@/components/Typography';
 import { commonAnimationVariants } from '@/utilities/animation';
 import type { NextPage } from 'next';
-import { createWidget } from '@typeform/embed';
-import '@typeform/embed/build/css/widget.css';
-import { useLayoutEffect, useRef } from 'react';
 import { styled } from '@/stitches';
+import { Widget } from '@typeform/embed-react';
 
 const TypeformContainer = styled('div', {
   width: '100%',
@@ -14,16 +12,6 @@ const TypeformContainer = styled('div', {
 });
 
 const VirtualPanels: NextPage = () => {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-
-  useLayoutEffect(() => {
-    if (containerRef.current === null) return;
-
-    createWidget('AMxzsZly', {
-      container: containerRef.current,
-    });
-  }, [containerRef]);
-
   return (
     <Layout
       animate="animate"
@@ -58,7 +46,9 @@ const VirtualPanels: NextPage = () => {
         the registration form below. A Zoom link will be sent to you next week.
       </Content>
 
-      <TypeformContainer id="typeform" ref={containerRef} />
+      <TypeformContainer>
+        <Widget id="AMxzsZly" style={{ height: '100%' }} />
+      </TypeformContainer>
 
       <HeadingMid
         css={{
