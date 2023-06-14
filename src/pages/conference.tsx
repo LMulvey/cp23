@@ -2,7 +2,7 @@ import { Layout } from '@/components/Layout';
 import { Content, Heading } from '@/components/Typography';
 import { styled } from '@/stitches';
 import { commonAnimationVariants } from '@/utilities/animation';
-import { FileHeart, Film, Star } from 'lucide-react';
+import { FileHeart, Film, MonitorSpeaker, Star } from 'lucide-react';
 import type { NextPage } from 'next';
 import Link from 'next/link';
 
@@ -15,7 +15,7 @@ const Grid = styled('div', {
     padding: '0',
   },
   '@bp2': {
-    flexFlow: 'row nowrap',
+    flexFlow: 'row wrap',
     padding: '0 $48',
   },
 });
@@ -44,6 +44,8 @@ const GridItem = styled('a', {
   '@bp2': {
     padding: '$16 $32',
     fontSize: '$24',
+    width: '40%',
+    flexGrow: 1,
   },
 
   '&:hover': {
@@ -119,6 +121,16 @@ const Conference: NextPage = () => {
           <Film size={48} />
           <p>Screening</p>
         </GridItem>
+        <Link
+          aria-label="Virtual Panel Information"
+          href="/virtual-panels"
+          passHref
+        >
+          <GridItem>
+            <MonitorSpeaker size={48} />
+            <p>Virtual Panels</p>
+          </GridItem>
+        </Link>
       </Grid>
     </Layout>
   );

@@ -2,20 +2,20 @@ import { Layout } from '@/components/Layout';
 import { Content, Heading } from '@/components/Typography';
 import { styled } from '@/stitches';
 import { commonAnimationVariants } from '@/utilities/animation';
-import { BedDouble, Building2, Car, DollarSign } from 'lucide-react';
+import { BedDouble, Building2, Car, DollarSign, Pizza } from 'lucide-react';
 import type { NextPage } from 'next';
 import Link from 'next/link';
 
 const Grid = styled('div', {
-  display: 'grid',
+  display: 'flex',
   gap: '$8',
   width: '100%',
   '@bp0': {
-    gridTemplateColumns: '1fr',
+    flexFlow: 'row wrap',
     padding: '0',
   },
-  '@bp3': {
-    gridTemplateColumns: 'repeat(2, 1fr)',
+  '@bp2': {
+    flexFlow: 'row wrap',
     padding: '0 $48',
   },
 });
@@ -44,6 +44,8 @@ const GridItem = styled('a', {
   '@bp2': {
     padding: '$16 $32',
     fontSize: '$24',
+    width: '40%',
+    flexGrow: 1,
   },
 
   '&:hover': {
@@ -113,6 +115,12 @@ const Plan: NextPage = () => {
           <GridItem>
             <Car size={48} />
             <p>Transportation</p>
+          </GridItem>
+        </Link>
+        <Link href="/plan-your-trip/calgary-dining" passHref>
+          <GridItem>
+            <Pizza size={48} />
+            <p>Calgary Eats & Drinks</p>
           </GridItem>
         </Link>
       </Grid>

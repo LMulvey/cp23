@@ -6,7 +6,7 @@ import {
   contentVariants,
   dividerAnimationVariants,
 } from '@/utilities/animation';
-import { useReducedMotion, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 
@@ -25,12 +25,10 @@ const Divider = styled(motion.div, {
 });
 
 const Home: NextPage = () => {
-  const shouldReduceMotion = useReducedMotion();
-
   return (
     <Layout
       animate="animate"
-      initial={shouldReduceMotion ? 'animate' : 'hidden'}
+      initial="animate"
       variants={{
         visible: {
           transition: {
