@@ -158,7 +158,6 @@ const CalgaryDining: NextPage = () => {
             key={sectionLabel}
             css={{
               textAlign: 'left',
-              '&:hover': { cursor: 'pointer' },
             }}
           >
             {sectionLabel}
