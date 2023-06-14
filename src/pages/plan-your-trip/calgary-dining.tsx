@@ -6,7 +6,7 @@ import '@typeform/embed/build/css/widget.css';
 
 const foodItems = [
   {
-    sectionLabel: '☕️ Coffee/Bakery/Causal',
+    sectionLabel: '☕️ Coffee/Bakery/Casual',
     items: [
       { title: 'Analog (Beltline)', url: 'https://www.analogcoffee.ca' },
       {
