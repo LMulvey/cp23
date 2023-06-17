@@ -120,6 +120,62 @@ const foodItems = [
       { title: 'Vegan Street (Inglewood)', url: 'https://www.veganstreet.ca' },
     ],
   },
+  {
+    sectionLabel: '🍺 Craft Beer & Cocktails (many have food options too)',
+    items: [
+      {
+        title: 'Betty Lou’s Library (Beltline)',
+        url: 'https://www.bettylouslibrary.com',
+      },
+      {
+        title: 'Business & Pleasure (Inglewood)',
+        url: 'https://www.itsbusinessandpleasure.com',
+      },
+      { title: 'Cannibale (Bridgeland)', url: 'https://www.cannibale.ca' },
+      {
+        title: 'Citizen Brewing Company (Greenview Industrial)',
+        url: 'https://citizenbrewingcompany.com',
+      },
+      { title: 'Cold Garden (Inglewood)', url: 'https://coldgarden.ca' },
+      {
+        title: 'High Line Brewing (Inglewood)',
+        url: 'http://highlinebrewing.com',
+      },
+      {
+        title: "Missy's This That (Beltline)",
+        url: 'https://www.missysthisthat.com',
+      },
+      { title: 'Proof (Beltline)', url: 'https://proofyyc.com' },
+      {
+        title: 'The Dandy Brewing Company (Inglewood)',
+        url: 'https://thedandybrewingcompany.com',
+      },
+    ],
+  },
+
+  {
+    sectionLabel: '🏳️‍🌈 Queer Calgary',
+    items: [
+      {
+        title: 'Rising Tides Taproom (Montgomery)',
+        url: 'https://www.risingtidestaproom.com',
+      },
+      { title: 'The Backlot (Beltline)', url: 'https://thebacklotbar.com' },
+      {
+        title: 'Twisted Element (Beltline)',
+        url: 'https://twistedelement.club',
+      },
+      {
+        title: 'Detour YYC (see Instagram for roaming queer parties)',
+        url: 'https://www.instagram.com/detouryyc/',
+      },
+      {
+        title:
+          'Calgary Queer Arts Society  (see Instagram for queer arts events around town)',
+        url: 'https://www.instagram.com/queerartsyyc/',
+      },
+    ],
+  },
 ];
 
 const CalgaryDining: NextPage = () => {
@@ -140,13 +196,14 @@ const CalgaryDining: NextPage = () => {
       whileInView="visible"
     >
       <Heading
+        key="eats-heading"
         css={{ textAlign: 'left', width: '100%', marginBottom: '$32' }}
         variants={commonAnimationVariants}
       >
         Calgary Eats & Drinks
       </Heading>
 
-      <Content css={{ textAlign: 'left' }}>
+      <Content key="eats-content" css={{ textAlign: 'left' }}>
         See the below list for some of our favorite places to eat and drink
         around the city. Most of the below are very central, with the
         neighbourhood in brackets. Enjoy!
