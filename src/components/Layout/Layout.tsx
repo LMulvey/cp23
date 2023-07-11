@@ -297,9 +297,6 @@ export const Layout = ({
 }: HTMLMotionProps<'div'> & { title?: string; children: ReactNode }) => {
   const { pathname } = useRouter();
   const segments = getSegments(pathname);
-  const isActive = (path: string) => {
-    return path.length > 1 ? pathname.includes(path) : pathname === path;
-  };
 
   return (
     <Container {...props}>
@@ -317,55 +314,9 @@ export const Layout = ({
               />
             </ImageContainer>
           </NextLink>
-
-          <Links hasDisabledLinks>
-            <NextLink href="/" passHref>
-              <Link
-                aria-label="Console-ing Passions 2023 Homepage"
-                isActive={isActive('/')}
-                href="/"
-              >
-                Home
-              </Link>
-            </NextLink>
-            <NextLink href="/plan-your-trip" passHref>
-              <Link
-                aria-label="Plan Your Trip to Console-ing Passions 2023"
-                isActive={isActive('/plan-your-trip')}
-                href="/plan-your-trip"
-              >
-                <Plane />
-                Plan Your Trip
-                <LinkTag>UPDATED!</LinkTag>
-              </Link>
-            </NextLink>
-            <NextLink href="/conference" passHref>
-              <Link
-                aria-label="Console-ing Passions 2023 Conference Info"
-                isActive={isActive('/conference')}
-                href="/conference"
-              >
-                <ConferenceIcon />
-                Conference Information
-                <LinkTag>NEW!</LinkTag>
-              </Link>
-            </NextLink>
-
-            <Link
-              as="a"
-              aria-label="Console-ing Passions 2023 Registration via CVent"
-              href="https://eur.cvent.me/mnQQa"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <UserCheck />
-              Register
-              <LinkTag>Closes June 11th!</LinkTag>
-            </Link>
-          </Links>
         </LogoAndLinks>
         <NavbarInfo>
-          <Heading css={{ fontSize: '$22' }}>June 22 - 24, 2023</Heading>
+          <Heading css={{ fontSize: '$22' }}>Thank you 🙇‍♀️</Heading>
           <Heading
             as={motion.a}
             css={{
@@ -375,7 +326,7 @@ export const Layout = ({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Gradient>University of Calgary</Gradient>
+            <Gradient>See you in 2024!</Gradient>
           </Heading>
         </NavbarInfo>
         <NavbarBorder />

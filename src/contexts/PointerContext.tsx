@@ -20,12 +20,6 @@ const calculatePointerPosition = (
     x: position.x - viewport.width / 2,
     y: -position.y + viewport.height / 2,
   },
-  // gl: {
-  // },
-  // glNormalized: {
-  // x: (position.x / viewport.width) * 2 - 1,
-  // y: -(position.y / viewport.height) * 2 + 1,
-  // },
 });
 
 const getMouseXY = (event: MouseEvent) => {

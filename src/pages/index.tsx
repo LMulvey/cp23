@@ -7,6 +7,7 @@ import {
   dividerAnimationVariants,
 } from '@/utilities/animation';
 import { motion } from 'framer-motion';
+import { Link } from 'lucide-react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 
@@ -26,41 +27,27 @@ const Divider = styled(motion.div, {
 
 const Home: NextPage = () => {
   return (
-    <Layout
-      animate="animate"
-      initial="animate"
-      variants={{
-        visible: {
-          transition: {
-            delayChildren: 0.5,
-            staggerChildren: 0.15,
-          },
-        },
-      }}
-      viewport={{ once: true }}
-      whileInView="visible"
-    >
+    <Layout>
+      <Heading>Looking for the Travel Funding information?</Heading>
       <Content css={{ marginBottom: 0 }} variants={contentVariants}>
         <strong>
-          The 2023 Console-ing Passions: International Conference on Television,
-          Video, Audio, New Media and Feminism
-        </strong>{' '}
-        will be held in person at the{' '}
-        <a
-          href="https://ucalgary.ca/"
-          aria-label="University of Calgary"
-          rel="noreferrer noopener"
-          target="_blank"
-        >
-          University of Calgary
-        </a>
-        , Canada on{' '}
-        <strong>
-          <time dateTime="2023-06-22">June 22 - 24, 2023</time>
+          Use the following Google Documents link to apply for Student Travel
+          Funding
         </strong>
-        .<br />
+        :{' '}
+        <a
+          href="https://forms.gle/sWygjLxJzret5UhM7"
+          aria-label="Apply for 2023 Console-ing Passions Student Travel Funding"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          click here <Link />
+        </a>
       </Content>
-      <Divider variants={dividerAnimationVariants} />
+      <Divider
+        css={{ marginTop: '$140' }}
+        variants={dividerAnimationVariants}
+      />
       <Content variants={contentVariants}>
         <strong>Console-ing Passions 2023</strong> is organized by Jessalynn
         Keller, Alora Paulsen Mulvey, Tamara Shepherd and Samantha Thrift from
