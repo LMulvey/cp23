@@ -11,7 +11,6 @@ import { useRouter } from 'next/router';
 import { Fragment, ReactNode } from 'react';
 import { PageTitle } from '../PageTitle';
 import { Content } from '../Typography';
-import { Component as ConferenceIcon, Plane, UserCheck } from 'lucide-react';
 import { pxToRem } from '@/utilities/pxToRem';
 
 const Container = styled(motion.div, {
