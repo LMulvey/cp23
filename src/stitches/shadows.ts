@@ -13,10 +13,4 @@ export const shadows = {
   blue20: '0 -2px 20px rgba(146, 200, 220, 0.32)',
   blue40: '0 -2px 40px rgba(146, 200, 220, 0.32)',
   blue100: '0px 8px 100px rgba(172, 168, 218, 0.5)',
-  heavy: '0 0 80px rgba(228, 232, 247, 0.4)',
-  navbarWWM: 'none',
-  onboardingPopup: '0 -2px 40px rgba(146, 200, 220, 0.32)',
-  pageActions: '0 0 24px rgba(169, 175, 200, 0.8)',
-  toast: ' 0 4px 14px rgba(0, 0, 0, 0.13)',
-  workWithMe: '0 24px 80px rgba(47, 89, 181, 0.1)',
 };

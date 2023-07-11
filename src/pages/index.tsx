@@ -1,5 +1,5 @@
 import { Layout } from '@/components/Layout';
-import { Content, Heading } from '@/components/Typography';
+import { Content, Heading, HeadingMid } from '@/components/Typography';
 import { styled } from '@/stitches';
 import {
   commonAnimationVariants,
@@ -44,6 +44,21 @@ const Home: NextPage = () => {
           click here <Link />
         </a>
       </Content>
+
+      <HeadingMid
+        css={{
+          color: '$pink1',
+          boxShadow: '$blue40',
+          textAlign: 'center',
+          margin: '$24 auto 0 auto',
+          padding: '$16',
+          background: 'rgba(255, 255, 255, 0.45)',
+          border: '$sizes$1 solid #333',
+          borderRadius: '$10',
+        }}
+      >
+        Deadline to apply is <u>August 1st</u>
+      </HeadingMid>
       <Divider
         css={{ marginTop: '$140' }}
         variants={dividerAnimationVariants}
